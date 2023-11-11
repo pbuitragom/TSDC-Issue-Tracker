@@ -1,27 +1,27 @@
 Feature: Iniciar una conversación
 
 @user1 @web
-Scenario: Como primer usuario inicio sesion y mandó un mensaje al usuario 2
-  Given I navigate to page "https://www.messenger.com/login"
+Scenario: Como usuario Quiero crear un post para compartirlo
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
-  And I wait for 2 seconds  
-  And I enter password "<PASSWORD1>"
-  And I wait for 2 seconds
+  When I enter email "<USERNAME>"
+  And I wait for 1 seconds  
+  And I enter password "<PASSWORD>"
+  And I wait for 1 seconds
   And I click next
-  And I wait for 7 seconds
-  Then I send a signal to user 2 containing "login1 complete"
-  And I wait for a signal containing "login2 complete" for 15 seconds
+  And I wait for 3 seconds
+  And I click on feature post
+  And I wait for 1 seconds
+  And I click on new post
+  And I wait for 1 seconds
+  And I set the post title "<POST_TITLE>"
+  And I wait for 1 seconds
+  And I set the post content "<POST_CONTENT>"
+  And I wait for 1 seconds
+  And I click on publish
+  And I wait for 1 seconds
+  And I click on right now
+  And I wait for 1 seconds
+  And I click on set living now
+  And I wait for 5 seconds
 
-@user2 @web
-Scenario: Como usuario 2 inicio sesion y mandó un mensaje al usuario 1
-  Given I navigate to page "https://www.messenger.com/login"
-  And I wait for 5 seconds
-  When I enter email "<USERNAME2>"
-  And I wait for 2 seconds
-  And I enter password "<PASSWORD2>"
-  And I wait for 7 seconds
-  And I wait for a signal containing "login1 complete" for 15 seconds
-  And I click next
-  And I wait for 7 seconds
-  And I send a signal to user 1 containing "login2 complete"

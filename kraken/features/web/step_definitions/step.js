@@ -1,19 +1,63 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
 When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#email');
+    let element = await this.driver.$('#identification');
     return await element.setValue(email);
 });
 
 When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#pass');
+    let element = await this.driver.$('#password');
     return await element.setValue(password);
 });
 
 When('I click next', async function() {
-    let element = await this.driver.$('#loginbutton');
+    let element = await this.driver.$('#ember5');
     return await element.click();
 })
+
+When('I click on feature post', async function() {
+    let element = await this.driver.$('#ember19');
+    return await element.click();
+})
+
+When('I click on new post', async function() {
+    let element = await this.driver.$('[data-test-new-post-button]');
+    return await element.click();
+})
+
+When('I set the post title {kraken-string}', async function (title) {
+    let element = await this.driver.$('[data-test-editor-title-input]');
+    return await element.setValue(title);
+});
+
+When('I set the post content {kraken-string}', async function (content) {
+    let element = await this.driver.$('.kg-prose');
+    return await element.setValue(content);
+});
+
+When('I click on publish', async function () {
+    let element = await this.driver.$('[data-test-button="publish-flow"]');
+    return await element.click();
+});
+
+When('I click on right now', async function () {
+    let element = await this.driver.$('//span[normalize-space()="Right now"]');
+    return await element.click();
+});
+
+
+When('I click on set living now', async function () {
+    let element = await this.driver.$('//label[text()="Set it live now"]');
+    return await element.click();
+});
+
+
+
+
+
+
+
+
 
 Then('I click on the first conversation', async function () {
     //let element = await this.driver.$('x1av1boa > div:nth-child(1) > div:nth-child(1)');
