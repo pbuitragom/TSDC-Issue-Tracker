@@ -40,13 +40,7 @@ When('I click on publish', async function () {
     return await element.click();
 });
 
-When('I click on right now', async function () {
-    let element = await this.driver.$('//span[normalize-space()="Right now"]');
-    return await element.click();
-});
-
-
-When('I click on set living now', async function () {
+When('I click on Continue, final review', async function () {
     let element = await this.driver.$('//label[text()="Set it live now"]');
     return await element.click();
 });
