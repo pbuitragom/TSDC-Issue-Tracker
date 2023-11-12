@@ -8,7 +8,7 @@ describe("Post Creation and Publishing", () => {
     cy.get("body > div.gh-app > div > main > section > section > ol")
       .first()
       .click();
-    cy.get('input[id="tag-name"]').type("#Updated Tag");
+    cy.get('input[id="tag-name"]').type("Updated Tag");
     cy.get('button[data-test-button="save"]').click();
     cy.contains("Saved").should("be.visible");
   });
