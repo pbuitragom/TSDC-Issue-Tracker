@@ -41,9 +41,15 @@ When('I click on publish', async function () {
 });
 
 When('I click on Continue, final review', async function () {
-    let element = await this.driver.$('//label[text()="Set it live now"]');
+    let element = await this.driver.$('button.gh-btn.gh-btn-black.gh-btn-large[data-test-button="continue"]');
     return await element.click();
 });
+
+When('I click on Push Now', async function () {
+    let element = await this.driver.$('button[data-test-button="confirm-publish"]');
+    return await element.click();
+});
+
 
 
 
