@@ -1,5 +1,6 @@
 Feature: Funcionalidad de creación de Posts
 
+
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
