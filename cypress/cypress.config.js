@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      login_url: "http://localhost:2369/ghost/#/signin",
+      login_url: "http://localhost:2369/ghost",
       products_url: "/products",
     },
   },
