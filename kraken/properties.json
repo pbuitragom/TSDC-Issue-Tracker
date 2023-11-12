@@ -2,5 +2,6 @@
     "USERNAME": "pmbtgun@gmail.com",
     "PASSWORD": "QAZwsx01@2023",
     "POST_TITLE": "Nuevo Post",
-    "POST_CONTENT": "Este es el nuevo contenido de un post"
+    "POST_CONTENT": "Este es el nuevo contenido de un post",
+    "POST_TITLE_UPDATED": "Titulo de Post Actualizado"
 }

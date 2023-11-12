@@ -75,6 +75,11 @@ When('I click on delete', async function () {
 });
 
 When('I confirm delete', async function () {
-    let element = await this.driver.$('span[data-test-task-button-state="idle"]');
+    let element = await this.driver.$('.gh-btn.gh-btn-red.gh-btn-icon');
+    return await element.click();
+});
+
+When('I click on update', async function () {
+    let element = await this.driver.$('.gh-btn.gh-btn-editor.gh-editor-save-trigger.green');
     return await element.click();
 });
