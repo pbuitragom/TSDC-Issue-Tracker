@@ -4,7 +4,7 @@ describe("Post Creation and Publishing", () => {
     cy.visit(`${Cypress.env("login_url")}/#/members`);
   });
 
-  it("allows a user to update a internal Tag", () => {
+  it("allows a user to invite a member", () => {
     cy.get('a[data-test-new-member-button="true"]').first().click();
     cy.get('input[id="member-name"]').type(`Test Name ${Date.now()}`);
     cy.get('input[id="member-email"]').type(`${Date.now()}@test.com`);

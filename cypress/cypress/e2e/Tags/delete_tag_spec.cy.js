@@ -4,7 +4,7 @@ describe("Post Creation and Publishing", () => {
     cy.visit(`${Cypress.env("login_url")}/#/tags`);
   });
 
-  it("allows a user to update a internal Tag", () => {
+  it("allows a user to delete a Tag", () => {
     cy.get('a[title="Edit tag"]').first().click();
     cy.get('button[data-test-button="delete-tag"]').click();
     cy.get('button[data-test-button="confirm"]').click();
