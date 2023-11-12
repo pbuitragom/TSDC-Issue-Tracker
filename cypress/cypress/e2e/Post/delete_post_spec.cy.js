@@ -4,8 +4,10 @@ describe("Post Creation and Publishing", () => {
     cy.visit(`${Cypress.env("login_url")}/#/posts`);
   });
 
-  it("allows a user to edit and publish a post", () => {
-    cy.get("#ember150 > h3:nth-child(1)").click();
+  it("allows a user to delete a post", () => {
+    cy.get(
+      "body > div.gh-app > div > main > section > section > div.posts-list.gh-list.feature-memberAttribution > div:nth-child(1) > li"
+    ).click();
     cy.get("button[data-test-psm-trigger]").click();
     cy.get(
       'button[class="gh-btn gh-btn-outline gh-btn-icon gh-btn-fullwidth"]'
