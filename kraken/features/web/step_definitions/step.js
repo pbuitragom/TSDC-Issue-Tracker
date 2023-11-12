@@ -56,3 +56,25 @@ Then('I should see text {kraken-string}', async function (title) {
     let text = await element.getText(); 
     expect(text).contains(title)
 });
+
+When('I click on recently created post', async function () {
+    let element = await this.driver.$('h3.gh-content-entry-title');
+    return await element.click();
+});
+
+When('I click on post settings', async function () {
+    let element = await this.driver.$('.settings-menu-toggle');
+    //let element = await this.driver.$('button[title='Settings']');
+    return await element.click();
+});
+
+When('I click on delete', async function () {
+    let element = await this.driver.$('//button[contains(., "Delete post")]');
+    //let element = await this.driver.$('button[title='Settings']');
+    return await element.click();
+});
+
+When('I confirm delete', async function () {
+    let element = await this.driver.$('span[data-test-task-button-state="idle"]');
+    return await element.click();
+});
