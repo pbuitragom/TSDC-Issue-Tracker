@@ -1,4 +1,4 @@
-Feature: Iniciar una conversación
+Feature: Funcinalidad de creación de Posts
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
@@ -23,5 +23,8 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I click on Continue, final review
   And I wait for 1 seconds
   And I click on Push Now
-  And I wait for 5 seconds
+  And I wait for 1 seconds
+  Then I should see text "<POST_TITLE>" 
+  And I wait for 30 seconds
+
 
