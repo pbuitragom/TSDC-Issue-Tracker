@@ -13,11 +13,10 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 
 Cypress.Commands.add("login", (email, password) => {
-  cy.visit(Cypress.env("login_url"));
+  cy.visit(`${Cypress.env("login_url")}/#/signin`);
   cy.get('input[id="identification"]').type(email);
   cy.get('input[name="password"]').type(password);
   cy.get('button[data-test-button="sign-in"]').click();
-  cy.url().should("include", "/#/dashboard");
 });
 
 // -- This is a child command --

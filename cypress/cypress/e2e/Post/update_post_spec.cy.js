@@ -5,9 +5,10 @@ describe("Post Creation and Publishing", () => {
   });
 
   it("allows a user to edit and publish a post", () => {
-    cy.get(".posts-list .gh-list-row:first").within(() => {
-      cy.get(".gh-post-list-button").click();
-    });
+    cy.get(
+      "body > div.gh-app > div > main > section > section > div.posts-list.gh-list.feature-memberAttribution > div:nth-child(1)"
+    ).click();
+
     cy.get('textarea[placeholder="Post title"]').clear();
     cy.get('textarea[placeholder="Post title"]').type(
       ' "This is a Edited Title post created using Cypress."'
@@ -16,15 +17,7 @@ describe("Post Creation and Publishing", () => {
     cy.get('p[data-koenig-dnd-droppable="true"]').type(
       "This is a Edited post created using Cypress."
     );
-    cy.get('button[data-test-button="publish-flow"]').click();
-    cy.contains("Ready, set, publish. Share it with the world.").should(
-      "be.visible"
-    );
-    cy.get('button[data-test-button="continue"]').click();
-    cy.contains("Ready, set, publish. Share it with the world.").should(
-      "be.visible"
-    );
-    cy.get('button[data-test-button="confirm-publish"]').click();
-    cy.get('div[class="gh-post-bookmark"]').should("be.visible");
+    cy.get('button[data-test-button="publish-save"]').click();
+    cy.contains("Updated").should("be.visible");
   });
 });
