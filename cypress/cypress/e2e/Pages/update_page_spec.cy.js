@@ -4,7 +4,7 @@ describe("Post Creation and Publishing", () => {
     cy.visit(`${Cypress.env("login_url")}/#/pages`);
   });
 
-  it("allows a user to edit and publish a post", () => {
+  it("allows a user to edit and publish a page", () => {
     cy.get(
       "body > div.gh-app > div > main > section > section > div.posts-list.gh-list.feature-memberAttribution > div:nth-child(1)"
     ).click();
