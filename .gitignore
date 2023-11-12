@@ -2,3 +2,6 @@ cypress/node_modules/
 cypress/.env
 cypress/Cypress.env
 cypress/cypress.env
+
+./kraken/node_modules/
+kraken/node_modules/
