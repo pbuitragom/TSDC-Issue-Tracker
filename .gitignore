@@ -1,0 +1,4 @@
+cypress/node_modules/
+cypress/.env
+cypress/Cypress.env
+cypress/cypress.env
