@@ -1,7 +1,5 @@
 cypress/node_modules/
 cypress/.env
-cypress/Cypress.env
-cypress/cypress.env
+cypress/cypress.env.json
 
-./kraken/node_modules/
 kraken/node_modules/
