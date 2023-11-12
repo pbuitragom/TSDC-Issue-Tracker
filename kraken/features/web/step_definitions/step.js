@@ -117,3 +117,50 @@ When('I click on delete page', async function () {
     let element = await this.driver.$('.gh-btn.gh-btn-outline.gh-btn-icon.gh-btn-fullwidth');
     return await element.click();
 });
+
+When('I click on feature members', async function() {
+    let element = await this.driver.$('[data-test-nav="members"]');
+    return await element.click();
+})
+
+When('I click on new member', async function() {
+    let element = await this.driver.$('[data-test-new-member-button]');
+    return await element.click();
+})
+
+When('I set the member name {kraken-string}', async function (name) {
+    let element = await this.driver.$('#member-name');
+    return await element.setValue(name);
+});
+
+When('I set the member email {kraken-string}', async function (email) {
+    let element = await this.driver.$('#member-email');
+    return await element.setValue(email);
+});
+
+When('I click on save member', async function () {
+    let element = await this.driver.$('button[data-test-button="save"]');
+    return await element.click();
+});
+
+When('I click on the member recently created', async function () {
+    let element = await this.driver.$('a[data-test-table-data="details"]');
+    return await element.click();
+});
+
+When('I update the member name {kraken-string}', async function (name) {
+    let element = await this.driver.$('#member-name');
+    return await element.setValue(name);
+});
+
+
+When('I click on member settings', async function () {
+    let element = await this.driver.$('button[data-test-button="member-actions"]');
+    return await element.click();
+});
+
+When('I click on delete member', async function () {
+    let element = await this.driver.$('button[data-test-button="delete-member"]');
+    return await element.click();
+});
+
