@@ -83,3 +83,37 @@ When('I click on update', async function () {
     let element = await this.driver.$('.gh-btn.gh-btn-editor.gh-editor-save-trigger.green');
     return await element.click();
 });
+
+
+
+
+
+When('I click on feature pages', async function() {
+    let element = await this.driver.$('[data-test-nav="pages"]');
+    return await element.click();
+})
+
+When('I click on new page', async function() {
+    let element = await this.driver.$('[data-test-new-page-button]');
+    return await element.click();
+})
+
+When('I set the page title {kraken-string}', async function (title) {
+    let element = await this.driver.$('[data-test-editor-title-input]');
+    return await element.setValue(title);
+});
+
+When('I set the page content {kraken-string}', async function (content) {
+    let element = await this.driver.$('.kg-prose');
+    return await element.setValue(content);
+});
+
+When('I click on recently created page', async function () {
+    let element = await this.driver.$('h3.gh-content-entry-title');
+    return await element.click();
+});
+
+When('I click on delete page', async function () {
+    let element = await this.driver.$('.gh-btn.gh-btn-outline.gh-btn-icon.gh-btn-fullwidth');
+    return await element.click();
+});
