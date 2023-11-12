@@ -155,7 +155,7 @@ When('I update the member name {kraken-string}', async function (name) {
 
 
 When('I click on member settings', async function () {
-    let element = await this.driver.$('button[data-test-button="member-actions"]');
+    let element = await this.driver.$('.gh-btn.gh-btn-icon');
     return await element.click();
 });
 
@@ -163,4 +163,12 @@ When('I click on delete member', async function () {
     let element = await this.driver.$('button[data-test-button="delete-member"]');
     return await element.click();
 });
+
+Then('System notify member already exists', async function () {
+    let element = await this.driver.$('.response');
+    expect(element).to.exist;
+});
+
+
+
 
