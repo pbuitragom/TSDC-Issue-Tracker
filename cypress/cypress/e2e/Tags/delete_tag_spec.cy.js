@@ -6,8 +6,8 @@ describe("Post Creation and Publishing", () => {
 
   it("allows a user to update a internal Tag", () => {
     cy.get('a[title="Edit tag"]').first().click();
-    cy.get('input[id="tag-name"]').type("Updated Tag");
-    cy.get('button[data-test-button="save"]').click();
-    cy.contains("Saved").should("be.visible");
+    cy.get('button[data-test-button="delete-tag"]').click();
+    cy.get('button[data-test-button="confirm"]').click();
+    cy.contains("New Tag").should("be.visible");
   });
 });

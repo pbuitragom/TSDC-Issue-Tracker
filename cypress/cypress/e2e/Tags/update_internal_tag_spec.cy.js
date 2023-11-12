@@ -5,9 +5,7 @@ describe("Post Creation and Publishing", () => {
   });
 
   it("allows a user to update a internal Tag", () => {
-    cy.get("body > div.gh-app > div > main > section > section > ol")
-      .first()
-      .click();
+    cy.get('a[title="Edit tag"]').first().click();
     cy.get('input[id="tag-name"]').type("#Updated Tag");
     cy.get('button[data-test-button="save"]').click();
     cy.contains("Saved").should("be.visible");
