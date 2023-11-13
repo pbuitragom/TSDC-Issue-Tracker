@@ -51,9 +51,9 @@ Asegúrese de tener Node.js (versión 16.20.2) instalado en su máquina. NVM (No
 
 #### Para Cypress:
 - Verificar Node.js: Asegúrate de tener Node.js instalado en tu máquina. Puedes descargarlo desde [el sitio web oficial de Node.js](https://nodejs.org/).
-- Inicializar un Proyecto Node.js. Ejecuta el siguiente comando para - inicializar un proyecto de Node.js: `npm init -y`
-- Instalar Cypress `npm install cypress --save-dev`
+- Ir a la ubicacion de cypress `cd cypress`
+- Ejecuta el siguiente comando para instalar dependencias: `npm install`
 - Abrir la Interfaz de Usuario de Cypress `npx cypress open`
-- Ejecutar las Pruebas `npx cypress run`
+- Ejecutar las pruebas en la inderfaz de cypress (recomendado) o ejecutar `npx cypress run`
 
 #### [Release](  ).
