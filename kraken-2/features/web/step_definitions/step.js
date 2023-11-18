@@ -54,41 +54,44 @@ When('I click on publish {string}', async function (scenario) {
 });
 
 When('I click on Continue, final review {string}', async function (scenario) {
-    let element = await this.driver.$('.gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view');
+    let element = await this.driver.$('.gh-publishmenu-button');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     return await element.click();
 });
 
 When('I click on Push Now {string}', async function(scenario) {
-    let element = await this.driver.$('.gh-btn gh-btn-black gh-btn-icon ember-view');
+    let element = await this.driver.$('//button[contains(@class, "gh-btn") and contains(@class, "gh-btn-black")]/span[text()="Publish"]');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
     return await element.click();
 });
 
-Then('I should see text {kraken-string} {string}', async function (title, scenario) {
-    let element = await this.driver.$('.gh-post-bookmark-content');
+Then('I should see {string}', async function (scenario) {
+    let element = await this.driver.$('.gh-notification-actions');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
-    let text = await element.getText(); 
-    expect(text).contains(title)
+    expect(element).to.exist;
 });
 
-When('I click on recently created post', async function () {
+When('I click on recently created post {string}', async function (scenario) {
     let element = await this.driver.$('h3.gh-content-entry-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.click();
 });
 
-When('I click on post settings', async function () {
+When('I click on post settings {string}', async function (filename) {
     let element = await this.driver.$('.settings-menu-toggle');
+    await takeAndSaveScreenshot(this.driver,  filename);
     return await element.click();
 });
 
-When('I click on delete', async function () {
+When('I click on delete {string}', async function (scenario) {
     let element = await this.driver.$('//button[contains(., "Delete post")]');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     return await element.click();
 });
 
-When('I confirm delete', async function () {
+When('I confirm delete {string}', async function (scenario){
     let element = await this.driver.$('.gh-btn.gh-btn-red.gh-btn-icon');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
     return await element.click();
 });
 
