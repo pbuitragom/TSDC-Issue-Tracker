@@ -182,5 +182,8 @@ Then('System notify member already exists', async function () {
 });
 
 
-
-
+Then('I should see the post section {string}', async function (scenario) {
+    let element = await this.driver.$('.gh-canvas-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
+    expect(element).to.exist;
+});

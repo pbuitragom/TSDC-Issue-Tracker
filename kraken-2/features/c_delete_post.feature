@@ -19,6 +19,8 @@ Scenario: Como usuario Quiero Eliminar el Post Anterior
   And I click on delete "escenario3"
   And I wait for 1 seconds
   And I confirm delete "escenario3"
+  And I wait for 3 seconds
+  Then I should see the post section "escenario3"
 
   
 
