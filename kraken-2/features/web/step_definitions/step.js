@@ -1,64 +1,66 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
+const { By } = require('selenium-webdriver');
+
 const expect = require('chai').expect;
 const { writeFileSync } = require('fs');
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
-    writeFileSync('screen_gv5_' + name, screenshot, 'base64');
+    writeFileSync('screen_gv4_' + name, screenshot, 'base64');
 }
 
 When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#identification');
+    let element = await this.driver.$("input[name='identification']");
     return await element.setValue(email);
 });
 
 When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#password');
+    let element = await this.driver.$("input[name='password']");
     return await element.setValue(password);
 });
 
 When('I click next {string}', async function(scenario) {
-    let element = await this.driver.$('#ember5');
+    let element = await this.driver.$(".js-login-button");
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_1.png");
     return await element.click();
 })
 
 When('I click on feature post {string}', async function(scenario) {
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    let element = await this.driver.$('#ember19');
+    let element = await this.driver.$('#ember26');
     return await element.click();
 })
 
 When('I click on new post', async function() {
-    let element = await this.driver.$('[data-test-new-post-button]');
+    let element = await this.driver.$('#ember112');
     return await element.click();
 })
 
 When('I set the post title {kraken-string} {string}', async function (title, scenario) {
-    let element = await this.driver.$('[data-test-editor-title-input]');
+    let element = await this.driver.$('.gh-editor-title.ember-text-area.gh-input');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.setValue(title);
 });
 
 When('I set the post content {kraken-string}', async function (content) {
-    let element = await this.driver.$('.kg-prose');
+    let element = await this.driver.$('.koenig-editor__editor');
     return await element.setValue(content);
 });
 
 When('I click on publish {string}', async function (scenario) {
-    let element = await this.driver.$('[data-test-button="publish-flow"]');
+    let element = await this.driver.$('.gh-publishmenu-trigger');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_4.png");
     return await element.click();
 });
 
 When('I click on Continue, final review {string}', async function (scenario) {
-    let element = await this.driver.$('button.gh-btn.gh-btn-black.gh-btn-large[data-test-button="continue"]');
+    let element = await this.driver.$('.gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     return await element.click();
 });
 
 When('I click on Push Now {string}', async function(scenario) {
-    let element = await this.driver.$('button[data-test-button="confirm-publish"]');
+    let element = await this.driver.$('.gh-btn gh-btn-black gh-btn-icon ember-view');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
     return await element.click();
 });
