@@ -79,13 +79,11 @@ When('I click on recently created post', async function () {
 
 When('I click on post settings', async function () {
     let element = await this.driver.$('.settings-menu-toggle');
-    //let element = await this.driver.$('button[title='Settings']');
     return await element.click();
 });
 
 When('I click on delete', async function () {
     let element = await this.driver.$('//button[contains(., "Delete post")]');
-    //let element = await this.driver.$('button[title='Settings']');
     return await element.click();
 });
 
@@ -98,10 +96,6 @@ When('I click on update', async function () {
     let element = await this.driver.$('.gh-btn.gh-btn-editor.gh-editor-save-trigger.green');
     return await element.click();
 });
-
-
-
-
 
 When('I click on feature pages', async function() {
     let element = await this.driver.$('[data-test-nav="pages"]');
