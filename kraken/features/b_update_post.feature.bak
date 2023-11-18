@@ -19,3 +19,6 @@ Scenario: Como usuario Quiero Actualizar el Post Anterior
   And I set the post title "<POST_TITLE_UPDATED>" "escenario2"
   And I wait for 1 seconds
   And I click on update "escenario2_step_4.png"
+  And I wait for 1 seconds
+  Then I should see post updated "escenario2"
+  

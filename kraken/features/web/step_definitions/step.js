@@ -59,13 +59,19 @@ When('I click on Continue, final review {string}', async function (scenario) {
 
 When('I click on Push Now {string}', async function(scenario) {
     let element = await this.driver.$('button[data-test-button="confirm-publish"]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
+    if (scenario !== "escenario4"){
+        await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
+    }
     return await element.click();
 });
 
 Then('I should see text {kraken-string} {string}', async function (title, scenario) {
     let element = await this.driver.$('.gh-post-bookmark-content');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
+    let stepName = "_step_7.png";
+    if (scenario === "escenario4"){
+        stepName = "_step_6.png";
+    }
+    await takeAndSaveScreenshot(this.driver,  scenario + stepName);
     let text = await element.getText(); 
     expect(text).contains(title)
 });
@@ -100,7 +106,8 @@ When('I click on update {string}', async function (sufixname) {
     return await element.click();
 });
 
-When('I click on feature pages', async function() {
+When('I click on feature pages {string}', async function(scenario) {
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
     let element = await this.driver.$('[data-test-nav="pages"]');
     return await element.click();
 })
@@ -110,8 +117,9 @@ When('I click on new page', async function() {
     return await element.click();
 })
 
-When('I set the page title {kraken-string}', async function (title) {
+When('I set the page title {kraken-string} {string}', async function (title, scenario) {
     let element = await this.driver.$('[data-test-editor-title-input]');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.setValue(title);
 });
 
@@ -187,6 +195,8 @@ Then('I should see the post section {string}', async function (scenario) {
     expect(element).to.exist;
 });
 
-
-
-
+Then('I should see post updated {string}', async function (scenario) {
+    let element = await this.driver.$("//button[@data-test-button='publish-save']/span[contains(text(), 'Updated')]");
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
+    expect(element).to.exist;
+});
