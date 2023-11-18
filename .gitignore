@@ -3,3 +3,7 @@ cypress/.env
 cypress/cypress.env.json
 
 kraken/node_modules/
+kraken/reports
+
+kraken-2/node_modules/
+kraken-2/reports
