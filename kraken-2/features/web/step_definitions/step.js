@@ -95,8 +95,12 @@ When('I confirm delete {string}', async function (scenario){
     return await element.click();
 });
 
-When('I click on update', async function () {
-    let element = await this.driver.$('.gh-btn.gh-btn-editor.gh-editor-save-trigger.green');
+When('I click on update {string}', async function (sufixname) {
+    let element = await this.driver.$( "//div[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-editor') and contains(@class, 'green') and contains(@class, 'gh-publishmenu-trigger')]/span[contains(text(), 'Update')]" );
+    await element.click();
+    element = await this.driver.$( "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-black') and contains(@class, 'gh-publishmenu-button') and contains(@class, 'gh-btn-icon')]/span[text()='Update']" );
+    await new Promise(r => setTimeout(r, 2000));
+    await takeAndSaveScreenshot(this.driver, sufixname);
     return await element.click();
 });
 
@@ -187,3 +191,11 @@ Then('I should see the post section {string}', async function (scenario) {
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
     expect(element).to.exist;
 });
+
+
+Then('I should see post updated {string}', async function (scenario) {
+    let element = await this.driver.$("//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-black') and contains(@class, 'gh-publishmenu-button') and contains(@class, 'gh-btn-icon') and contains(@class, 'gh-btn-green')]/span[contains(text(), 'Updated')]");
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
+    expect(element).to.exist;
+});
+
