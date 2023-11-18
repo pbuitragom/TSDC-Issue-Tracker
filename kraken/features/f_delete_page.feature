@@ -8,7 +8,7 @@ Scenario: Como usuario Quiero Eliminar el Post Anterior
   And I wait for 1 seconds  
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
-  And I click next
+  And I click next "escenario6"
   And I wait for 1 seconds
   And I click on feature pages
   And I wait for 1 seconds

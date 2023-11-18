@@ -8,7 +8,7 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
-  And I click next
+  And I click next "escenario4"
   And I wait for 1 seconds
   And I click on feature pages
   And I wait for 1 seconds
@@ -18,9 +18,9 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait for 1 seconds
   And I set the page content "<POST_CONTENT>"
   And I wait for 1 seconds
-  And I click on publish
+  And I click on publish "escenario4"
   And I wait for 1 seconds
-  And I click on Continue, final review
+  And I click on Continue, final review "escenario4"
   And I wait for 1 seconds
   And I click on Push Now
   And I wait for 1 seconds

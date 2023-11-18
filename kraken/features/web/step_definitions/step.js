@@ -70,36 +70,35 @@ Then('I should see text {kraken-string} {string}', async function (title, scenar
     expect(text).contains(title)
 });
 
-When('I click on recently created post', async function () {
+When('I click on recently created post {string}', async function (scenario) {
     let element = await this.driver.$('h3.gh-content-entry-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.click();
 });
 
-When('I click on post settings', async function () {
+When('I click on post settings {string}', async function (filename) {
     let element = await this.driver.$('.settings-menu-toggle');
-    //let element = await this.driver.$('button[title='Settings']');
+    await takeAndSaveScreenshot(this.driver,  filename);
     return await element.click();
 });
 
-When('I click on delete', async function () {
+When('I click on delete {string}', async function (scenario) {
     let element = await this.driver.$('//button[contains(., "Delete post")]');
-    //let element = await this.driver.$('button[title='Settings']');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     return await element.click();
 });
 
-When('I confirm delete', async function () {
+When('I confirm delete {string}', async function (scenario){
     let element = await this.driver.$('.gh-btn.gh-btn-red.gh-btn-icon');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
     return await element.click();
 });
 
-When('I click on update', async function () {
-    let element = await this.driver.$('.gh-btn.gh-btn-editor.gh-editor-save-trigger.green');
+When('I click on update {string}', async function (sufixname) {
+    let element = await this.driver.$('//button[@data-test-button="publish-save"]');
+    await takeAndSaveScreenshot(this.driver,  sufixname);
     return await element.click();
 });
-
-
-
-
 
 When('I click on feature pages', async function() {
     let element = await this.driver.$('[data-test-nav="pages"]');
@@ -179,6 +178,12 @@ When('I click on delete member', async function () {
 
 Then('System notify member already exists', async function () {
     let element = await this.driver.$('.response');
+    expect(element).to.exist;
+});
+
+Then('I should see the post section {string}', async function (scenario) {
+    let element = await this.driver.$('.gh-canvas-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
     expect(element).to.exist;
 });
 

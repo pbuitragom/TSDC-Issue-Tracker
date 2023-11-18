@@ -8,17 +8,19 @@ Scenario: Como usuario Quiero Eliminar el Post Anterior
   And I wait for 1 seconds  
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
-  And I click next
+  And I click next "escenario3"
   And I wait for 1 seconds
-  And I click on feature post
+  And I click on feature post "escenario3"
   And I wait for 1 seconds
-  And I click on recently created post
+  And I click on recently created post "escenario3"
   And I wait for 1 seconds
-  And I click on post settings
+  And I click on post settings "escenario3_step_4.png"
   And I wait for 1 seconds
-  And I click on delete
+  And I click on delete "escenario3"
   And I wait for 1 seconds
-  And I confirm delete
+  And I confirm delete "escenario3"
+  And I wait for 3 seconds
+  Then I should see the post section "escenario3"
   
 
 

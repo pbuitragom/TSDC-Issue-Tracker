@@ -8,7 +8,7 @@ Scenario: Como usuario Quiero actualizar una page para compartirlo
   And I wait for 1 seconds  
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
-  And I click next
+  And I click next "escenario5"
   And I wait for 1 seconds
   And I click on feature pages
   And I wait for 1 seconds
@@ -16,6 +16,6 @@ Scenario: Como usuario Quiero actualizar una page para compartirlo
   And I wait for 1 seconds
   And I click on post settings
   And I wait for 1 seconds
-  And I set the post title "<POST_TITLE_UPDATED>" 
+  And I set the post title "<POST_TITLE_UPDATED>" "escenario5" 
   And I wait for 1 seconds
   And I click on update

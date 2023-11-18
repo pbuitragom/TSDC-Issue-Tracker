@@ -8,14 +8,14 @@ Scenario: Como usuario Quiero Actualizar el Post Anterior
   And I wait for 1 seconds  
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
-  And I click next
+  And I click next "escenario2"
   And I wait for 1 seconds
-  And I click on feature post
+  And I click on feature post "escenario2"
   And I wait for 1 seconds
-  And I click on recently created post
+  And I click on recently created post "escenario2"
   And I wait for 1 seconds
-  And I click on post settings
+  And I click on post settings "escenario2_step_3.png"
   And I wait for 1 seconds
-  And I set the post title "<POST_TITLE_UPDATED>" 
+  And I set the post title "<POST_TITLE_UPDATED>" "escenario2"
   And I wait for 1 seconds
-  And I click on update
+  And I click on update "escenario2_step_4.png"
