@@ -22,7 +22,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I click on publish "escenario1"
   And I wait for 1 seconds
   And I click on Continue, final review "escenario1"
-  And I wait for 30 seconds
+  And I wait for 2 seconds
   And I click on Push Now "escenario1"
   And I wait for 1 seconds
   Then I should see "escenario1"

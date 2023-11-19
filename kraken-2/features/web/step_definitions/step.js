@@ -32,7 +32,7 @@ When('I click on feature post {string}', async function(scenario) {
 })
 
 When('I click on new post', async function() {
-    let element = await this.driver.$('#ember112');
+    let element = await this.driver.$("//a[contains(@class, 'ember-view') and contains(@class, 'gh-btn') and contains(@class, 'gh-btn-primary') and @href='#/editor/post/' and ./span[text()='New post']]");
     return await element.click();
 })
 
@@ -71,6 +71,12 @@ Then('I should see {string}', async function (scenario) {
     expect(element).to.exist;
 });
 
+Then('I should see page published {string}', async function (scenario) {
+    let element = await this.driver.$('.gh-notification-actions');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
+    expect(element).to.exist;
+});
+
 When('I click on recently created post {string}', async function (scenario) {
     let element = await this.driver.$('h3.gh-content-entry-title');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
@@ -82,6 +88,13 @@ When('I click on post settings {string}', async function (filename) {
     await takeAndSaveScreenshot(this.driver,  filename);
     return await element.click();
 });
+
+When('I click on page settings {string}', async function (filename) {
+    let element = await this.driver.$('.gh-publishmenu-button');
+    await takeAndSaveScreenshot(this.driver,  filename);
+    return await element.click();
+});
+
 
 When('I click on delete {string}', async function (scenario) {
     let element = await this.driver.$('//button[contains(., "Delete post")]');
@@ -99,33 +112,48 @@ When('I click on update {string}', async function (sufixname) {
     let element = await this.driver.$( "//div[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-editor') and contains(@class, 'green') and contains(@class, 'gh-publishmenu-trigger')]/span[contains(text(), 'Update')]" );
     await element.click();
     element = await this.driver.$( "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-black') and contains(@class, 'gh-publishmenu-button') and contains(@class, 'gh-btn-icon')]/span[text()='Update']" );
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise(r => setTimeout(r, 1000));
     await takeAndSaveScreenshot(this.driver, sufixname);
     return await element.click();
 });
 
-When('I click on feature pages', async function() {
-    let element = await this.driver.$('[data-test-nav="pages"]');
+When('I click on update page {string}', async function (scenario) {
+    await takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
+    let element = await this.driver.$( "//div[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-editor') and contains(@class, 'green') and contains(@class, 'gh-publishmenu-trigger')]/span[contains(text(), 'Update')]" );
+    await element.click();
+    await new Promise(r => setTimeout(r, 2000));
+    await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
+    element = await this.driver.$( "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-black') and contains(@class, 'gh-publishmenu-button') and contains(@class, 'gh-btn-icon')]/span[text()='Update']" );
+    await element.click();
+    await new Promise(r => setTimeout(r, 2000));
+    return await takeAndSaveScreenshot(this.driver, scenario + "_step_7.png");
+    
+});
+
+When('I click on feature pages {string}', async function(scenario) {
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
+    let element = await this.driver.$("//a[contains(@class, 'ember-view') and @href='#/pages/' and contains(text(), 'Pages')]");
     return await element.click();
 })
 
 When('I click on new page', async function() {
-    let element = await this.driver.$('[data-test-new-page-button]');
+    let element = await this.driver.$("//a[contains(@class, 'ember-view') and contains(@class, 'gh-btn') and contains(@class, 'gh-btn-primary') and @href='#/editor/page/' and ./span[text()='New page']]");
     return await element.click();
 })
 
 When('I set the page title {kraken-string}', async function (title) {
-    let element = await this.driver.$('[data-test-editor-title-input]');
+    let element = await this.driver.$('.gh-editor-title');
     return await element.setValue(title);
 });
 
 When('I set the page content {kraken-string}', async function (content) {
-    let element = await this.driver.$('.kg-prose');
+    let element = await this.driver.$('.koenig-editor__editor');
     return await element.setValue(content);
 });
 
-When('I click on recently created page', async function () {
+When('I click on recently created page {string}', async function (scenario) {
     let element = await this.driver.$('h3.gh-content-entry-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.click();
 });
 
