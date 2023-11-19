@@ -34,13 +34,13 @@ cd [resemble]
 `npm install playwright`
 `npm install resemblejs`
 
-5. Ejecuta las pruebas con el comando:
+5. Ejecuta la herramienta con el comando:
 `node index.js`
 
-Este comando debe ejecutarse dentro del directorio de pruebas resemble. Se creará el directorio results/prueba y se generarán las imágenes de comparación. Revisa las imágenes para inspeccionar las diferencias.
+Este comando debe ejecutarse dentro del directorio de  resemble. Se creará el directorio results/prueba y se generarán las imágenes de comparación. Revisa las imágenes para inspeccionar las diferencias.
 
 # Generación de Reportes
-La herramienta genera automáticamente un archivo `report.html` en el directorio ./`results/prueba` después de la ejecución de las pruebas. Este informe proporciona una comparación visual y analítica entre dos versiones de la aplicación web.
+La herramienta genera automáticamente un archivo `report.html` en el directorio ./`results/prueba` después de la ejecución de la herramienta. Este informe proporciona una comparación visual y analítica entre dos versiones de la aplicación web.
 
 ## Detalles del Informe
 
