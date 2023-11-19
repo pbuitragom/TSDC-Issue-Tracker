@@ -12,11 +12,11 @@ Scenario: Como usuario Quiero actualizar una page para compartirlo
   And I wait for 1 seconds
   And I click on feature pages "escenario5"
   And I wait for 1 seconds
-  And I click on recently created page
+  And I click on recently created page "escenario5"
   And I wait for 1 seconds
-  And I click on post settings "escenario5_step_3.png"
+  And I click on post settings "escenario5_step_4.png"
   And I wait for 1 seconds
   And I set the post title "<POST_TITLE_UPDATED>" "escenario5" 
   And I wait for 1 seconds
-  And I click on update "escenario5"
+  And I click on update page "escenario5"
   And I wait for 3 seconds

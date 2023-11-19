@@ -127,8 +127,9 @@ When('I set the page content {kraken-string}', async function (content) {
     return await element.setValue(content);
 });
 
-When('I click on recently created page', async function () {
+When('I click on recently created page {string}', async function (scenario) {
     let element = await this.driver.$('h3.gh-content-entry-title');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.click();
 });
 
@@ -198,4 +199,12 @@ Then('I should see post updated {string}', async function (scenario) {
     let element = await this.driver.$("//button[@data-test-button='publish-save']/span[contains(text(), 'Updated')]");
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     expect(element).to.exist;
+});
+
+When('I click on update page {string}', async function (scenario) {
+    await takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
+    let element = await this.driver.$('//button[@data-test-button="publish-save"]');
+    await element.click();
+    await new Promise(r => setTimeout(r, 2000));
+    return await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
 });
