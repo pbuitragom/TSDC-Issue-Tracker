@@ -68,43 +68,43 @@ Para cada una de las versiones es requerido configurar ghost con estos datos
 
 Configurando los campos de la imagen de arriba así:
 
-Site title: MISO Entrega 6
-Full Name: Pepito Perez
-Email address: pmbtgun@gmail.com
-Password: QAZwsx01@2023
+- Site title: MISO Entrega 6
+- Full Name: Pepito Perez
+- Email address: pmbtgun@gmail.com
+- Password: QAZwsx01@2023
 
 #### Pasos de Instalación
 #### Para Kraken:
 Funciona para Node 16: nvm use v16
-Seguir el manual de instalación de Kraken en su ambiente aquí
-Instalar android-platform-tools, en nuestro caso: brew install android-platform-tools
-Instalar npm install chai
-Clonar este repositorio https://github.com/pbuitragom/TSDC-Issue-Tracker.git
+- Seguir el manual de instalación de Kraken en su ambiente aquí
+- `Instalar android-platform-tools`, en nuestro caso: `brew install android-platform-tools`
+- `Instalar npm install chai`
+- Clonar este repositorio https://github.com/pbuitragom/TSDC-Issue-Tracker.git
 
 En este punto para kraken tendrá dos carpetas
 
-- kraken: Pruebas para la version ghost v5.72.2
-- kraken-v2: Pruebas para la version ghots v4.44
+- `kraken`: Pruebas para la version `ghost v5.72.2`
+- `kraken-v2`: Pruebas para la version `ghots v4.44`
 
-#### Para la ejecución de las pruebs de la versión ghots v5.72.2:
+#### Para la ejecución de las pruebs de la versión `ghost v5.72.2`:
 
-Asegúrese de subir el servicio de ghost v5.72.2
-cd kraken
-npm install 
-./node_modules/kraken-node/bin/kraken-node run
+- Asegúrese de subir el servicio de `ghost v5.72.2`
+- `cd kraken`
+- `npm install`
+- `./node_modules/kraken-node/bin/kraken-node run`
 
-#### Para la ejecución de las pruebs de la versión ghost v4.44:
+#### Para la ejecución de las pruebs de la versión `ghost v4.44`:
 
-Asegúrese de subir el servicio de ghost v5.72.2
-cd kraken-2
-npm install 
-./node_modules/kraken-node/bin/kraken-node run
+- Asegúrese de subir el servicio de `ghost v4.44`
+- `cd kraken-2`
+- `npm install`
+- `./node_modules/kraken-node/bin/kraken-node run`
 
 Traas la ejecución tendrá cerca de 60 imágenes que corresponden a los screenshots de referencia de cada una las versiones para cada uno de los scenarios y steps definidos. 
 
 A continuación y video con la explicación de las configuraciones para kraken: https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbyUksKM_e9DtZHDtbCckUABJOLopTZDSI5bZG5P1bsIfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ggIbsm
 
-
+### [WIKI](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-6-%E2%80%90-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-modificados-para-tomar-screenshots,-resemble-y-backstop)
 
 ### Herramienta de Regresión Visual  Resemble.js
 #### [Carpeta de Herramienta](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/resemble)
@@ -144,6 +144,6 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 
 #### Reporte de Incidencias
 - [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
-#### 
-- [Wiki](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-6-%E2%80%90-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-modificados-para-tomar-screenshots,-resemble-y-backstop)
+
+
 
