@@ -57,4 +57,53 @@ Asegúrese de tener Node.js (versión 16.20.2) instalado en su máquina. NVM (No
 - Abrir la Interfaz de Usuario de Cypress `npx cypress open`
 - Ejecutar las pruebas en la inderfaz de cypress (recomendado) o ejecutar `npx cypress run`
 
-#### [Release](  ).
+--------------------------
+## Semana 6 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para tomar screenshots, resemble y backstop
+
+Previamente instale Ghost como se indica en la guía: Guía de Instalación de Ghost
+
+Se deben utilizar dos versiones de ghots Ghost v5.72.2  y Ghost 4.44
+
+Para cada una de las versiones es requerido configurar ghost con estos datos
+
+Configurando los campos de la imagen de arriba así:
+
+Site title: MISO Entrega 6
+Full Name: Pepito Perez
+Email address: pmbtgun@gmail.com
+Password: QAZwsx01@2023
+
+Pasos de Instalación
+Para Kraken:
+Funciona para Node 16: nvm use v16
+Seguir el manual de instalación de Kraken en su ambiente aquí
+Instalar android-platform-tools, en nuestro caso: brew install android-platform-tools
+Instalar npm install chai
+Clonar este repositorio https://github.com/pbuitragom/TSDC-Issue-Tracker.git
+
+En este punto para kraken tendrá dos carpetas
+
+- kraken: Pruebas para la version ghots v5.72.2
+- kraken-v2: Pruebas para la version ghots v4.44
+
+Para la ejecución de las pruebs de la versión ghots v5.72.2:
+
+Asegúrese de subir el servicio de ghost v5.72.2
+cd kraken
+npm install 
+./node_modules/kraken-node/bin/kraken-node run
+
+Para la ejecución de las pruebs de la versión ghots v4.44:
+
+Asegúrese de subir el servicio de ghost v5.72.2
+cd kraken-2
+npm install 
+./node_modules/kraken-node/bin/kraken-node run
+
+Traas la ejecución tendrá cerca de 60 imágenes que corresponden a los screenshots de referencia de cada una las versiones para cada uno de los scenarios y steps definidos. 
+
+
+
+
+
+
