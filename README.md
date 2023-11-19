@@ -73,8 +73,8 @@ Full Name: Pepito Perez
 Email address: pmbtgun@gmail.com
 Password: QAZwsx01@2023
 
-Pasos de Instalación
-Para Kraken:
+#### Pasos de Instalación
+#### Para Kraken:
 Funciona para Node 16: nvm use v16
 Seguir el manual de instalación de Kraken en su ambiente aquí
 Instalar android-platform-tools, en nuestro caso: brew install android-platform-tools
@@ -83,17 +83,17 @@ Clonar este repositorio https://github.com/pbuitragom/TSDC-Issue-Tracker.git
 
 En este punto para kraken tendrá dos carpetas
 
-- kraken: Pruebas para la version ghots v5.72.2
+- kraken: Pruebas para la version ghost v5.72.2
 - kraken-v2: Pruebas para la version ghots v4.44
 
-Para la ejecución de las pruebs de la versión ghots v5.72.2:
+#### Para la ejecución de las pruebs de la versión ghots v5.72.2:
 
 Asegúrese de subir el servicio de ghost v5.72.2
 cd kraken
 npm install 
 ./node_modules/kraken-node/bin/kraken-node run
 
-Para la ejecución de las pruebs de la versión ghots v4.44:
+#### Para la ejecución de las pruebs de la versión ghost v4.44:
 
 Asegúrese de subir el servicio de ghost v5.72.2
 cd kraken-2
@@ -106,6 +106,42 @@ A continuación y video con la explicación de las configuraciones para kraken: 
 
 
 
+### Herramienta de Regresión Visual  Resemble.js
+#### [Carpeta de Herramienta](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/resemble)
+#### [Readme Resemble](https://github.com/pbuitragom/TSDC-Issue-Tracker/blob/main/resemble/README.md)
 
+
+#### Ejecución de la Herramienta
+Pasos para ejecutar:
+1. Clonar el repositorio: `git clone https://github.com/pbuitragom/TSDC-Issue-Tracker.git`
+2. Navegar al directorio: `cd TSDC-Issue-Tracker`
+3. Cambiar al directorio de pruebas de resemble: `cd resemble`
+4. Instalar dependencias:
+   - `npm install playwright`
+   - `npm install resemblejs`
+5. Ejecutar con: `node index.js`
+
+Se generará el directorio `results/prueba` [Carpeta](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/resemble/results/prueba) con imágenes de comparación.
+
+#### Generación de Reportes
+Genera automáticamente `report.html` en `./results/prueba` para comparaciones visuales y analíticas.
+
+
+#### Detalles del Informe
+- Encabezado con resultadol informe
+- Imágenes de Comparación: originales (versión ghots v5.72.2), de comparación (versión ghots v4.44) y de diferencias.
+- Análisis: Métricas de comparación, dimensiones, porcentajes de desajuste y tiempos.
+
+![Reporte](https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funiandes-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!vwqOSlQUMEm1xjJd1NI12ose1AFvZIpGnwnvBiu_FvzrifNfF2ugTJo4rV3r0FGB%2Fitems%2F01YH4BEZSVHVRSDNLNERDYH2ZZAXVMMG5L%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdW5pYW5kZXMtbXkuc2hhcmVwb2ludC5jb21AZmFiZDA0N2MtZmY0OC00OTJhLThiYmItOGY5OGI5ZmI5Y2NhIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTcwMDM5NTIwMCIsImV4cCI6IjE3MDA0MTY4MDAiLCJlbmRwb2ludHVybCI6IjNXWDk3VkhzclR5ZkExN3hHSno4aHoxNmtIem1hckM0anlDanFEMFZGekk9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJOR0U0WlRCaFltWXRNVFExTkMwME9UTXdMV0kxWXpZdE16STFaR1EwWkRJek5XUmgiLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8aS5zaW5uaW5nQHVuaWFuZGVzLmVkdS5jbyIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyYmNhYTVhZjdAbGl2ZS5jb20iLCJzaWQiOiJjZmM4Y2QwOS1kODU3LTQzYTgtOTk4Yy0yZDYzNDEwNGM1ZTMiLCJ0dCI6IjAiLCJpcGFkZHIiOiIxODEuNTUuMTU4LjE1NiIsInNuaWQiOiI2Iiwic3RwIjoidCJ9.0tBlToVlva5ECl-jFKEZeKd-CHTBzjyUEC6PWN29VkI&cTag=%22c%3A%7B21633D55-6DB5-4724-83EB-3905EAC61BAB%7D%2C1%22&encodeFailures=1&width=623&height=489&srcWidth=623&srcHeight=489)
+
+#### Videos Explicativos
+- [Resemble](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EXcnu4wLTgROmponXoCe3aAB46111_vN5HGePolwxKwLfQ?e=Z0OlK1)
+- [Ejecución y Reporte](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZf0JKl1d29NhJeouOYBrD8BupGmLeeJa-R2SGSFYDVmgQ?e=VLiGES)
+
+#### Análisis de Resemble.js: Herramienta de Comparación Visual/Pruebas VRT
+- [Análisis de Resemble.js: Herramienta de Comparación Visual/Pruebas VRT](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Analisis-de--Pros-y-Contras-de-Herramienta-Resemble-Js)
+
+#### Reporte de Incidencias
+- [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
 
 
