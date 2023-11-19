@@ -58,7 +58,7 @@ Asegúrese de tener Node.js (versión 16.20.2) instalado en su máquina. NVM (No
 - Ejecutar las pruebas en la inderfaz de cypress (recomendado) o ejecutar `npx cypress run`
 
 --------------------------
-## [Semana 6 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para tomar screenshots, resemble y backstop](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-6-%E2%80%90-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-modificados-para-tomar-screenshots,-resemble-y-backstop)
+## Semana 6 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para tomar screenshots, resemble y backstop
 
 Previamente instale Ghost como se indica en la guía: Guía de Instalación de Ghost
 
@@ -135,6 +135,7 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 ![Reporte](https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funiandes-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!vwqOSlQUMEm1xjJd1NI12ose1AFvZIpGnwnvBiu_FvzrifNfF2ugTJo4rV3r0FGB%2Fitems%2F01YH4BEZSVHVRSDNLNERDYH2ZZAXVMMG5L%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdW5pYW5kZXMtbXkuc2hhcmVwb2ludC5jb21AZmFiZDA0N2MtZmY0OC00OTJhLThiYmItOGY5OGI5ZmI5Y2NhIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTcwMDM5NTIwMCIsImV4cCI6IjE3MDA0MTY4MDAiLCJlbmRwb2ludHVybCI6IjNXWDk3VkhzclR5ZkExN3hHSno4aHoxNmtIem1hckM0anlDanFEMFZGekk9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJOR0U0WlRCaFltWXRNVFExTkMwME9UTXdMV0kxWXpZdE16STFaR1EwWkRJek5XUmgiLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8aS5zaW5uaW5nQHVuaWFuZGVzLmVkdS5jbyIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyYmNhYTVhZjdAbGl2ZS5jb20iLCJzaWQiOiJjZmM4Y2QwOS1kODU3LTQzYTgtOTk4Yy0yZDYzNDEwNGM1ZTMiLCJ0dCI6IjAiLCJpcGFkZHIiOiIxODEuNTUuMTU4LjE1NiIsInNuaWQiOiI2Iiwic3RwIjoidCJ9.0tBlToVlva5ECl-jFKEZeKd-CHTBzjyUEC6PWN29VkI&cTag=%22c%3A%7B21633D55-6DB5-4724-83EB-3905EAC61BAB%7D%2C1%22&encodeFailures=1&width=623&height=489&srcWidth=623&srcHeight=489)
 
 #### Videos Explicativos
+- [Configuraciones para kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbyUksKM_e9DtZHDtbCckUABJOLopTZDSI5bZG5P1bsIfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ggIbsm)
 - [Resemble](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EXcnu4wLTgROmponXoCe3aAB46111_vN5HGePolwxKwLfQ?e=Z0OlK1)
 - [Ejecución y Reporte](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZf0JKl1d29NhJeouOYBrD8BupGmLeeJa-R2SGSFYDVmgQ?e=VLiGES)
 
@@ -143,5 +144,6 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 
 #### Reporte de Incidencias
 - [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
-
+#### 
+- [Wiki](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-6-%E2%80%90-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-modificados-para-tomar-screenshots,-resemble-y-backstop)
 
