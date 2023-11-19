@@ -122,11 +122,10 @@ When('I click on update page {string}', async function (scenario) {
     let element = await this.driver.$( "//div[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-editor') and contains(@class, 'green') and contains(@class, 'gh-publishmenu-trigger')]/span[contains(text(), 'Update')]" );
     await element.click();
     await new Promise(r => setTimeout(r, 2000));
-    await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
     element = await this.driver.$( "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-black') and contains(@class, 'gh-publishmenu-button') and contains(@class, 'gh-btn-icon')]/span[text()='Update']" );
     await element.click();
     await new Promise(r => setTimeout(r, 2000));
-    return await takeAndSaveScreenshot(this.driver, scenario + "_step_7.png");
+    return await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
     
 });
 
