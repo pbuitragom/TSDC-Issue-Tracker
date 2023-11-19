@@ -117,9 +117,8 @@ When('I click on new page', async function() {
     return await element.click();
 })
 
-When('I set the page title {kraken-string} {string}', async function (title, scenario) {
+When('I set the page title {kraken-string}', async function (title) {
     let element = await this.driver.$('[data-test-editor-title-input]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.setValue(title);
 });
 
