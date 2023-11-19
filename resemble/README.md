@@ -17,15 +17,15 @@ Para la ejecución de la herramienta, se procede a utilizar imagénes obtenidas 
 El archivo index.js es el script principal que orquesta las comparaciones visuales, utilizando módulos clave como playwright, resemblejs/compareImages, fs para el manejo de archivos y path para la manipulación de rutas de archivos.
 
 #### Proceso de Desarrollo
-Configuración inicial: Se importan los módulos necesarios y se extraen configuraciones del archivo config.json.
+- Configuración inicial: Se importan los módulos necesarios y se extraen configuraciones del archivo config.json.
 Preparación del entorno: Se crea un directorio para almacenar los resultados de las pruebas si no existe.
-Ejecución de pruebas: Se realiza un bucle sobre los escenarios de prueba definidos. Para cada paso de cada escenario, se comparan las capturas de pantalla correspondientes entre las dos versiones de Ghost.
-Comparación de imágenes: Utilizando compareImages de Resemble.js, se analizan las imágenes y se almacenan los resultados.
-Generación de reportes: Se crea un informe HTML detallado con los resultados de las comparaciones, incluyendo imágenes y análisis de las diferencias.
+- Ejecución de pruebas: Se realiza un bucle sobre los escenarios de prueba definidos. Para cada paso de cada escenario, se comparan las capturas de pantalla correspondientes entre las dos versiones de Ghost.
+- Comparación de imágenes: Utilizando compareImages de Resemble.js, se analizan las imágenes y se almacenan los resultados.
+- Generación de reportes: Se crea un informe HTML detallado con los resultados de las comparaciones, incluyendo imágenes y análisis de las diferencias.
 Estilos del informe: Se copia un archivo CSS para estilizar el informe generado.
 Manejo de errores: Se implementa el manejo de errores durante la ejecución de las pruebas.
 
-## Ejecución de herramienta
+## Configuración y Ejecución de herramienta
 
 Sigue estos pasos para ejecutar las pruebas:
 
