@@ -23,7 +23,7 @@ Sigue estos pasos para ejecutar las pruebas:
 2. Navega al directorio clonado:
    * cd [`TSDC-Issue-Tracker`]
 
-Si encuentras problemas o tienes preguntas, consulta el tutorial de pruebas de regresión visual o la documentación de Resemble.js. Seguir el manual de instalación de Kraken en su ambiente [aquí](https://misovirtual.virtual.uniandes.edu.co/codelabs/visual-regression-testing-resemble/index.html#4)
+Si encuentras problemas o tienes preguntas, consulta el tutorial de pruebas de regresión visual o la documentación de Resemble.js. Seguir el manual de instalación en su ambiente [aquí](https://misovirtual.virtual.uniandes.edu.co/codelabs/visual-regression-testing-resemble/index.html#4)
 Antes de comenzar, asegúrate de tener Node.js y npm instalados. Esta herramienta ha sido probada con:
 
 - Node.js versión `18.12.1`
