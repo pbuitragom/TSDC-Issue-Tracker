@@ -102,6 +102,8 @@ npm install
 
 Traas la ejecución tendrá cerca de 60 imágenes que corresponden a los screenshots de referencia de cada una las versiones para cada uno de los scenarios y steps definidos. 
 
+A continuación y video con la explicación de las configuraciones para kraken: https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbyUksKM_e9DtZHDtbCckUABJOLopTZDSI5bZG5P1bsIfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ggIbsm
+
 
 
 
