@@ -18,7 +18,7 @@ Scenario: Como usuario Quiero Eliminar el Post Anterior
   And I wait for 1 seconds
   And I click on delete page
   And I wait for 1 seconds
-  And I confirm delete
+  And I confirm delete "escenario6" 
   
 
 
