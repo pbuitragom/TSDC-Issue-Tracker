@@ -1,0 +1,45 @@
+const { By } = require('selenium-webdriver');
+
+class GhostSignInPage {
+    constructor(driver) {
+        this.driver = driver;
+    }
+
+    // Elementos de la página
+    get emailInput() {
+        return this.driver.findElement(By.css("input[name='identification']"));
+    }
+
+    get passwordInput() {
+        return this.driver.findElement(By.css("input[name='password']"));
+    }
+
+    get signInButton() {
+        return this.driver.findElement(By.css("button.login"));
+    }
+
+    get forgotPasswordLink() {
+        return this.driver.findElement(By.css("button.forgotten-link"));
+    }
+
+    // Métodos para interactuar con la página
+    async enterEmail(email) {
+        await this.emailInput.clear();
+        await this.emailInput.sendKeys(email);
+    }
+
+    async enterPassword(password) {
+        await this.passwordInput.clear();
+        await this.passwordInput.sendKeys(password);
+    }
+
+    async clickSignIn() {
+        await this.signInButton.click();
+    }
+
+    async clickForgotPassword() {
+        await this.forgotPasswordLink.click();
+    }
+}
+
+module.exports = GhostSignInPage;

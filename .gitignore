@@ -6,5 +6,8 @@ cypress-ghost-4.44/node_modules/
 cypress-ghost-4.44/cypress.env.json
 
 kraken/node_modules/
-
+kraken/reports
 .DS_Store
+kraken-2/node_modules/
+kraken-2/reports
+
