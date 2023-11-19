@@ -8,6 +8,10 @@ Esta herramienta automatiza la comparación visual de aplicaciones web entre dif
 
 - Para información detallada sobre las características y API de Resemble.js, visita el [repositorio de GitHub de Resemble.js](https://github.com/rsmbl/Resemble.js/blob/master/README.md).
 
+
+## Versiones comparadas
+Para la ejecución de la herramienta, se procede a utilizar imagénes obtenidas que se encuentran en kraken y kraken-2, que corresponden a el screenshot de un escenario y un paso enumerado en las dos versiones Ghost Version 5.72.2 y Ghost Vesrión 4.44, las cuales se comparan y se evalúan las diferencias visuales, y se establece un análisis y reporte para identificar los cambios entre las dos versiones. 
+
 ## Ejecución de herramienta
 
 Sigue estos pasos para ejecutar las pruebas:
@@ -65,4 +69,4 @@ La apariencia del informe está definida por el archivo index.css, asegurando qu
 
 
 ## Reporte de Incidencias 
-[TSDC-Issue-Tracker.git](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues) 
+* [TSDC-Issue-Tracker.git](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues) 
