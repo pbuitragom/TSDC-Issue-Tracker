@@ -14,7 +14,7 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait for 1 seconds
   And I click on new page
   And I wait for 1 seconds
-  And I set the page title "<POST_TITLE>" "escenario4_step_3.png"
+  And I set the page title "<POST_TITLE>"
   And I wait for 1 seconds
   And I set the page content "<POST_CONTENT>"
   And I wait for 1 seconds
