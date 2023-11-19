@@ -8,7 +8,7 @@ Esta herramienta automatiza la comparación visual de aplicaciones web entre dif
 
 - Para información detallada sobre las características y API de Resemble.js, visita el [repositorio de GitHub de Resemble.js](https://github.com/rsmbl/Resemble.js/blob/master/README.md).
 
-## Ejecución de Pruebas
+## Ejecución de herramienta
 
 Sigue estos pasos para ejecutar las pruebas:
 
