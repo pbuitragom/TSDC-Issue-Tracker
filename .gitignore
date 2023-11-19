@@ -1,5 +1,8 @@
 cypress/node_modules/
 cypress/.env
 cypress/cypress.env.json
+cypress-ghost-4.44/.env
+cypress-ghost-4.44/node_modules/
+cypress-ghost-4.44/cypress.env.json
 
 kraken/node_modules/
