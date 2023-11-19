@@ -50,7 +50,7 @@ La herramienta genera automáticamente un archivo `report.html` en el directorio
 El informe HTML se compone de las siguientes secciones:
 
 * Encabezado: Muestra la marca de tiempo de ejecución.
-* Imágenes de Comparación: Imágenes lado a lado para cada escenario y paso, incluyendo la imagen original, la de comparación y la imagen de diferencia generada.
+* Imágenes de Comparación: Imágenes lado a lado para cada escenario y paso, incluyendo la imagen original (versión ghots v5.72.2),   la de comparación (versión ghots v4.44) y la imagen de diferencia generada.
 * Análisis: Métricas detalladas para cada comparación, tales como igualdad de dimensiones, porcentajes de desajuste y tiempo de análisis.
 La apariencia del informe está definida por el archivo index.css, asegurando que el contenido se presente de manera clara y navegable.
 
