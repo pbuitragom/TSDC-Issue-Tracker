@@ -1,4 +1,4 @@
-# Documentación de la Herramienta de Pruebas de Regresión Visual con Resemble Js
+# Documentación de la Herramienta de Regresión Visual con Resemble Js
 
 ## Descripción General
 
