@@ -145,5 +145,51 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 #### Reporte de Incidencias
 - [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
 
+# Herramienta de Regresión Visual con BackstopJS
+
+## Carpeta de la Herramienta
+
+- **Carpeta:** [backstop](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/backstop)
+
+## Instrucciones de Uso
+
+### Configuración Inicial
+
+1. Instalar BackstopJS localmente:
+    ```bash
+    npm install backstopjs
+    ```
+
+2. Configurar BackstopJS con el comando:
+    ```bash
+    backstop init
+    ```
+
+3. Personalizar la configuración en el archivo `backstop.json` según las necesidades de tu proyecto.
+
+### Ejecución de Pruebas
+
+#### Desde la línea de comandos:
+
+1. Para realizar una referencia de pantallas:
+    ```bash
+    backstop reference
+    ```
+
+2. Para ejecutar pruebas y comparar pantallas:
+    ```bash
+    backstop test
+    ```
+
+#### Usando NPM Scripts:
+
+Añade los siguientes scripts a tu archivo `package.json`:
+
+```json
+"scripts": {
+  "reference": "backstop reference",
+  "test": "backstop test"
+}
+
 
 
