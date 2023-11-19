@@ -58,7 +58,7 @@ Asegúrese de tener Node.js (versión 16.20.2) instalado en su máquina. NVM (No
 - Ejecutar las pruebas en la inderfaz de cypress (recomendado) o ejecutar `npx cypress run`
 
 --------------------------
-## Semana 6 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para tomar screenshots, resemble y backstop
+## [Semana 6 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para tomar screenshots, resemble y backstop](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-6-%E2%80%90-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-modificados-para-tomar-screenshots,-resemble-y-backstop)
 
 Previamente instale Ghost como se indica en la guía: Guía de Instalación de Ghost
 
