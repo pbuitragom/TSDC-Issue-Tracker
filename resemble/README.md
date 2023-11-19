@@ -13,10 +13,10 @@ Esta herramienta automatiza la comparación visual de aplicaciones web entre dif
 Para la ejecución de la herramienta, se procede a utilizar imagénes obtenidas que se encuentran en kraken y kraken-2, que corresponden a el screenshot de un escenario y un paso enumerado en las dos versiones Ghost Version 5.72.2 y Ghost Vesrión 4.44, las cuales se comparan y se evalúan las diferencias visuales, y se establece un análisis y reporte para identificar los cambios entre las dos versiones. 
 
 
-##Estructura del Proyecto
+### Estructura del Proyecto
 El archivo index.js es el script principal que orquesta las comparaciones visuales, utilizando módulos clave como playwright, resemblejs/compareImages, fs para el manejo de archivos y path para la manipulación de rutas de archivos.
 
-####Proceso de Desarrollo
+#### Proceso de Desarrollo
 Configuración inicial: Se importan los módulos necesarios y se extraen configuraciones del archivo config.json.
 Preparación del entorno: Se crea un directorio para almacenar los resultados de las pruebas si no existe.
 Ejecución de pruebas: Se realiza un bucle sobre los escenarios de prueba definidos. Para cada paso de cada escenario, se comparan las capturas de pantalla correspondientes entre las dos versiones de Ghost.
