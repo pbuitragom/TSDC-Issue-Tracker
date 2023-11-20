@@ -138,26 +138,23 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 
 ![Reporte](https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funiandes-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!vwqOSlQUMEm1xjJd1NI12ose1AFvZIpGnwnvBiu_FvzrifNfF2ugTJo4rV3r0FGB%2Fitems%2F01YH4BEZSVHVRSDNLNERDYH2ZZAXVMMG5L%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvdW5pYW5kZXMtbXkuc2hhcmVwb2ludC5jb21AZmFiZDA0N2MtZmY0OC00OTJhLThiYmItOGY5OGI5ZmI5Y2NhIiwiaXNzIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwIiwibmJmIjoiMTcwMDM5NTIwMCIsImV4cCI6IjE3MDA0MTY4MDAiLCJlbmRwb2ludHVybCI6IjNXWDk3VkhzclR5ZkExN3hHSno4aHoxNmtIem1hckM0anlDanFEMFZGekk9IiwiZW5kcG9pbnR1cmxMZW5ndGgiOiIxMTgiLCJpc2xvb3BiYWNrIjoiVHJ1ZSIsInZlciI6Imhhc2hlZHByb29mdG9rZW4iLCJzaXRlaWQiOiJOR0U0WlRCaFltWXRNVFExTkMwME9UTXdMV0kxWXpZdE16STFaR1EwWkRJek5XUmgiLCJuYW1laWQiOiIwIy5mfG1lbWJlcnNoaXB8aS5zaW5uaW5nQHVuaWFuZGVzLmVkdS5jbyIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAyYmNhYTVhZjdAbGl2ZS5jb20iLCJzaWQiOiJjZmM4Y2QwOS1kODU3LTQzYTgtOTk4Yy0yZDYzNDEwNGM1ZTMiLCJ0dCI6IjAiLCJpcGFkZHIiOiIxODEuNTUuMTU4LjE1NiIsInNuaWQiOiI2Iiwic3RwIjoidCJ9.0tBlToVlva5ECl-jFKEZeKd-CHTBzjyUEC6PWN29VkI&cTag=%22c%3A%7B21633D55-6DB5-4724-83EB-3905EAC61BAB%7D%2C1%22&encodeFailures=1&width=623&height=489&srcWidth=623&srcHeight=489)
 
-#### Videos Explicativos
-- [Configuraciones para kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbyUksKM_e9DtZHDtbCckUABJOLopTZDSI5bZG5P1bsIfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ggIbsm)
+#### Videos del Proyecto
 - [Resemble](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EXcnu4wLTgROmponXoCe3aAB46111_vN5HGePolwxKwLfQ?e=Z0OlK1)
 - [Ejecución y Reporte](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZf0JKl1d29NhJeouOYBrD8BupGmLeeJa-R2SGSFYDVmgQ?e=VLiGES)
 
 #### Análisis de Resemble.js: Herramienta de Comparación Visual/Pruebas VRT
 - [Análisis de Resemble.js: Herramienta de Comparación Visual/Pruebas VRT](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Analisis-de--Pros-y-Contras-de-Herramienta-Resemble-Js)
 
-#### Reporte de Incidencias
-- [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
 
-# Herramienta de Regresión Visual con BackstopJS
+### Herramienta de Regresión Visual con BackstopJS
 
-## Carpeta de la Herramienta
+#### Carpeta de la Herramienta
 
 - **Carpeta:** [backstop](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/backstop)
 
-## Instrucciones de Uso
+#### Instrucciones de Uso
 
-### Configuración Inicial
+#### Configuración Inicial
 
 1. Instalar BackstopJS localmente:
     ```bash
@@ -171,7 +168,7 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 
 4. Personalizar la configuración en el archivo `backstop.json` según las necesidades de tu proyecto.
 
-### Hosting Local de Imágenes con HTTP-Server
+#### Hosting Local de Imágenes con HTTP-Server
 
 #### Pre-requisitos
 - Asegúrate de tener Node.js instalado desde [nodejs.org](https://nodejs.org/).
@@ -212,7 +209,7 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
 
 
 
-### Ejecución de Pruebas
+#### Ejecución de Pruebas
 
 #### Desde la línea de comandos:
 
@@ -235,6 +232,32 @@ Añade los siguientes scripts a tu archivo `package.json`:
   "reference": "backstop reference",
   "test": "backstop test"
 }
+```
+
+#### Comparación de Imágenes:
+Utilizando BackstopJS, se analizan las imágenes y se almacenan los resultados.
+
+Para más detalles consulte [README Backstop](https://github.com/pbuitragom/TSDC-Issue-Tracker/blob/main/backstop/README.md)  
+
+#### Videos del Proyecto
+
+* [Creación de referencias](https://app.usebubbles.com/4EbGReqJj6Q3FJcTt1Q9jS/untitled?threadId=8Yq8cCK9MU1L3B7QtchgVx)
+
+* [Creación de diferencias](https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled)
+
+#### Análisis de BackstopJS
+* [Análisis de BackstopJS: Herramienta de Comparación Visual Pruebas VRT](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/An%C3%A1lisis-de-BackstopJS:-Herramienta-de-Comparaci%C3%B3n-Visual-Pruebas-VRT)
 
 
+#### Videos Explicativos Generales
+- [Configuraciones para kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbyUksKM_e9DtZHDtbCckUABJOLopTZDSI5bZG5P1bsIfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ggIbsm)
+- [Resemble](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EXcnu4wLTgROmponXoCe3aAB46111_vN5HGePolwxKwLfQ?e=Z0OlK1)
+- [Ejecución y Reporte](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZf0JKl1d29NhJeouOYBrD8BupGmLeeJa-R2SGSFYDVmgQ?e=VLiGES)
 
+* [Creación de referencias BackStop](https://app.usebubbles.com/4EbGReqJj6Q3FJcTt1Q9jS/untitled?threadId=8Yq8cCK9MU1L3B7QtchgVx)
+
+* [Creación de diferencias BackStop](https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled)
+
+
+### Reporte de Incidencias
+- [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
