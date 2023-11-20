@@ -73,6 +73,8 @@ Configurando los campos de la imagen de arriba así:
 - Email address: pmbtgun@gmail.com
 - Password: QAZwsx01@2023
 
+Es importante asegurar que en la aplicación ghost no existan posts, pages, tags ni members. 
+
 #### Pasos de Instalación
 #### Para Kraken:
 Funciona para Node 16: nvm use v16
