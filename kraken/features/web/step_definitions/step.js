@@ -37,7 +37,8 @@ When('I click on new post', async function() {
 When('I set the post title {kraken-string} {string}', async function (title, scenario) {
     let element = await this.driver.$('[data-test-editor-title-input]');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
-    return await element.setValue(title);
+    await element.setValue(title);
+    return await new Promise(r => setTimeout(r, 2000));
 });
 
 When('I set the post content {kraken-string}', async function (content) {
@@ -45,7 +46,13 @@ When('I set the post content {kraken-string}', async function (content) {
     return await element.setValue(content);
 });
 
-When('I click on publish {string}', async function (scenario) {
+When('I click on publish post {string}', async function (scenario) {
+    let element = await this.driver.$('[data-test-button="publish-flow"]');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_4.png");
+    return await element.click();
+});
+
+When('I click on publish page {string}', async function (scenario) {
     let element = await this.driver.$('[data-test-button="publish-flow"]');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_4.png");
     return await element.click();
@@ -67,7 +74,7 @@ When('I click on Push Now {string}', async function(scenario) {
 
 Then('I should see text {kraken-string} {string}', async function (title, scenario) {
     let element = await this.driver.$('.gh-post-bookmark-content');
-    let stepName = "_step_7.png";
+    let stepName = "_step_6.png";
     if (scenario === "escenario4"){
         stepName = "_step_6.png";
     }
@@ -117,12 +124,13 @@ When('I click on new page', async function() {
     return await element.click();
 })
 
-When('I set the page title {kraken-string}', async function (title) {
+When('I set the page title {kraken-string} {string}', async function (title, scenario) {
     let element = await this.driver.$('[data-test-editor-title-input]');
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
     return await element.setValue(title);
 });
 
-When('I set the page content {kraken-string}', async function (content) {
+When('I set the page content {kraken-string} {string}', async function (content, scenario) {
     let element = await this.driver.$('.kg-prose');
     return await element.setValue(content);
 });
@@ -204,7 +212,7 @@ Then('I should see post updated {string}', async function (scenario) {
 When('I click on update page {string}', async function (scenario) {
     await takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
     let element = await this.driver.$('//button[@data-test-button="publish-save"]');
-    await element.click();
     await new Promise(r => setTimeout(r, 2000));
+    await element.click();
     return await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
 });

@@ -14,11 +14,11 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait for 1 seconds
   And I click on new page
   And I wait for 1 seconds
-  And I set the page title "<POST_TITLE>"
+  And I set the page title "<POST_TITLE>" "escenario4"
   And I wait for 1 seconds
-  And I set the page content "<POST_CONTENT>"
+  And I set the page content "<POST_CONTENT>" "escenario4"
   And I wait for 1 seconds
-  And I click on publish "escenario4"
+  And I click on publish page "escenario4"
   And I wait for 1 seconds
   And I click on Continue, final review "escenario4"
   And I wait for 1 seconds
