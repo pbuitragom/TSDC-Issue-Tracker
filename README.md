@@ -97,6 +97,8 @@ En este punto para kraken tendrá dos carpetas
 
 #### Para la ejecución de las pruebs de la versión `ghost v4.44`:
 
+Nota: Es importante tener en cuenta que los archivos kraken-2/a_create_post.feature, kraken-2/b_update_post.feature ,  kraken-2/c_delete_post.feature , kraken-2/d_create_page.feature  y  kraken-2/e_update_page.feature actualmente apunta a una máquina en AWS en la sentencia Given I navigate to page "http://ec2-18-191-54-169.us-east-2.compute.amazonaws.com:2368/ghost/#/signin", es necesario que quién realice las pruebas haga la configuración de la url según aplique ya que la url http://ec2-18-191-54-169.us-east-2.compute.amazonaws.com:2368/ghost/#/signin NO está disponible para terceros. 
+
 - Asegúrese de subir el servicio de `ghost v4.44`
 - `cd kraken-2`
 - `npm install`
