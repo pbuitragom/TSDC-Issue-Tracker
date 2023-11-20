@@ -43,4 +43,11 @@ Este proceso proporciona una manera sistemática de detectar y analizar cambios 
 
 Para obtener ayuda sobre comandos específicos y opciones de configuración, consulta la [documentación oficial de BackstopJS](https://github.com/garris/BackstopJS).
 
-**¡Recuerda ajustar la configuración según las necesidades específicas de tu proyecto!**
+## Videos del Proyecto
+
+Creación de referencias
+https://app.usebubbles.com/4EbGReqJj6Q3FJcTt1Q9jS/untitled?threadId=8Yq8cCK9MU1L3B7QtchgVx
+
+Creación de diferencias
+https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled
+
