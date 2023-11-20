@@ -14,6 +14,7 @@
 
 Cypress.Commands.add("login", (email, password) => {
   cy.visit(`${Cypress.env("login_url")}/#/signin`);
+  // "password": "J#Qm#c!ME2!wxu!"
   cy.get('input[id="identification"]').type(email);
   cy.get('input[name="password"]').type(password);
   cy.get('button[data-test-button="sign-in"]').click();

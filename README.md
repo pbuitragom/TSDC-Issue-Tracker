@@ -165,7 +165,48 @@ Genera automáticamente `report.html` en `./results/prueba` para comparaciones v
     backstop init
     ```
 
-3. Personalizar la configuración en el archivo `backstop.json` según las necesidades de tu proyecto.
+4. Personalizar la configuración en el archivo `backstop.json` según las necesidades de tu proyecto.
+
+### Hosting Local de Imágenes con HTTP-Server
+
+#### Pre-requisitos
+- Asegúrate de tener Node.js instalado desde [nodejs.org](https://nodejs.org/).
+
+#### Pasos
+
+1. **Instalación de http-server:**
+   - Abre una terminal o línea de comandos.
+   - Instala http-server globalmente usando npm:
+     ```bash
+     npm install -g http-server
+     ```
+
+2. **Organiza tus Imágenes:**
+   - Crea una carpeta para almacenar las imágenes que desees hostear, como "mis_imagenes".
+   - Coloca todas las imágenes en esta carpeta.
+
+3. **Iniciar el Servidor HTTP:**
+   - Abre la terminal y navega a la carpeta de imágenes:
+     ```bash
+     cd ruta/a/mis_imagenes
+     ```
+   - Inicia el servidor con el comando:
+     ```bash
+     http-server
+     ```
+   - El servidor se iniciará y mostrará las direcciones para acceder a los archivos, generalmente algo como [http://127.0.0.1:8080](http://127.0.0.1:8080).
+
+4. **Acceder a las Imágenes:**
+   - Abre un navegador y visita la dirección proporcionada por http-server.
+   - Verás un listado de tus imágenes. Haz clic en cualquier imagen para visualizarla.
+
+5. **Detener el Servidor:**
+   - Cuando hayas terminado, detén el servidor presionando Ctrl + C en la terminal.
+
+#### Notas
+- Para características específicas (CORS, caché, etc.), http-server ofrece opciones de configuración. Consulta la [documentación de http-server](https://www.npmjs.com/package/http-server).
+
+
 
 ### Ejecución de Pruebas
 
