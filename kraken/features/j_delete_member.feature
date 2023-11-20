@@ -18,5 +18,5 @@ Scenario: Como usuario Quiero crear un member y que acceda a contenido exclusivo
   And I wait for 1 seconds
   And I click on delete member
   And I wait for 1 seconds
-  And I confirm delete
+  And I confirm delete "escenario10"
   

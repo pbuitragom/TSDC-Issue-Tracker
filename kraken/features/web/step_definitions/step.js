@@ -84,8 +84,8 @@ Then('I should see text {kraken-string} {string}', async function (title, scenar
 });
 
 When('I click on recently created post {string}', async function (scenario) {
-    let element = await this.driver.$('h3.gh-content-entry-title');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
+    let element = await this.driver.$('.gh-content-entry-title'); 
+    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png" );
     return await element.click();
 });
 
