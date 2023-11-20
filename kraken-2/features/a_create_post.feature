@@ -19,11 +19,11 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I set the post content "<POST_CONTENT>"
   And I wait for 1 seconds
-  And I click on publish "escenario1"
+  And I click on publish post "escenario1"
   And I wait for 1 seconds
   And I click on Continue, final review "escenario1"
   And I wait for 2 seconds
-  And I click on Push Now "escenario1"
+  And I click on Post Push Now "escenario1"
   And I wait for 1 seconds
   Then I should see "escenario1"
   

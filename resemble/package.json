@@ -8,8 +8,11 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "playwright": "^1.40.0",
     "resemblejs": "^5.0.0"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2"
   }
 }

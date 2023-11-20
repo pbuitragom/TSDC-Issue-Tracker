@@ -12,7 +12,7 @@ Scenario: Como usuario Quiero Eliminar el Post Anterior
   And I wait for 1 seconds
   And I click on feature pages "escenario6"
   And I wait for 1 seconds
-  And I click on recently created page
+  And I click on recently created page "escenario6"
   And I wait for 1 seconds
   And I click on member settings
   And I wait for 1 seconds
