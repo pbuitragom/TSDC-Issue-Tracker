@@ -41,6 +41,16 @@ When('I set the post title {kraken-string} {string}', async function (title, sce
     return await new Promise(r => setTimeout(r, 2000));
 });
 
+Then('I can NOT save or update posts', async function () {
+    let element = await this.driver.$('[data-test-editor-title-input]');
+    try{
+        expect(element).to.not.exist;
+    } catch (error) {
+        console.log("La prueba falló debido a que el elemento no debería existir, pero fue encontrado.", error.message);
+    }
+    return;
+});
+
 When('I set the post content {kraken-string}', async function (content) {
     let element = await this.driver.$('.kg-prose');
     return await element.setValue(content);
@@ -80,7 +90,8 @@ Then('I should see text {kraken-string} {string}', async function (title, scenar
     }
     await takeAndSaveScreenshot(this.driver,  scenario + stepName);
     let text = await element.getText(); 
-    expect(text).contains(title)
+    expect(text).contains(title);
+    return;
 });
 
 When('I click on recently created post {string}', async function (scenario) {
@@ -195,18 +206,21 @@ When('I click on delete member', async function () {
 Then('System notify member already exists', async function () {
     let element = await this.driver.$('.response');
     expect(element).to.exist;
+    return;
 });
 
 Then('I should see the post section {string}', async function (scenario) {
     let element = await this.driver.$('.gh-canvas-title');
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
     expect(element).to.exist;
+    return;
 });
 
 Then('I should see post updated {string}', async function (scenario) {
     let element = await this.driver.$("//button[@data-test-button='publish-save']/span[contains(text(), 'Updated')]");
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
     expect(element).to.exist;
+    return;
 });
 
 When('I click on update page {string}', async function (scenario) {

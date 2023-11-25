@@ -1,4 +1,4 @@
-Feature: Funcionalidad de creación de Posts
+Feature: Funcionalidad de actualizacion de Posts
 
 @user1 @web
 Scenario: Como usuario Quiero Actualizar el Post Anterior
@@ -21,4 +21,9 @@ Scenario: Como usuario Quiero Actualizar el Post Anterior
   And I click on update "escenario2_step_4.png"
   And I wait for 1 seconds
   Then I should see post updated "escenario2"
+
+  Examples:
+  | USERNAME   | PASSWORD   | POST_TITLE_UPDATED    | 
+  | pmbtgun@gmail.com      | QAZwsx01@2023      | This a title Updated |
+  | pmbtgun@gmail.com      | QAZwsx01@2023      | 123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345|
   
