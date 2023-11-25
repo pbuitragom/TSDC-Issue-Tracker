@@ -25,6 +25,16 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I click on Push Now "escenario1"
   And I wait for 1 seconds
   Then I should see text "<POST_TITLE>" "escenario1"
+  And I wait for 1 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/posts"
+  And I wait for 1 seconds
+  And I click on recently created post "escenario3"
+  And I wait for 1 seconds
+  And I click on post settings "escenario3_step_4.png"
+  And I wait for 1 seconds
+  And I click on delete "escenario3"
+  And I wait for 1 seconds
+  And I confirm delete "escenario3"
   
   Examples:
   | USERNAME   | PASSWORD   | POST_TITLE    | POST_CONTENT    |

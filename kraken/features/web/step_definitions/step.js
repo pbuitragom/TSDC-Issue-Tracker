@@ -1,6 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
 const { writeFileSync } = require('fs');
+const fetch = require('node-fetch');
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
@@ -91,7 +92,7 @@ Then('I should see text {kraken-string} {string}', async function (title, scenar
     await takeAndSaveScreenshot(this.driver,  scenario + stepName);
     let text = await element.getText(); 
     expect(text).contains(title);
-    return;
+    return
 });
 
 When('I click on recently created post {string}', async function (scenario) {

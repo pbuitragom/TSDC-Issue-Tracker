@@ -1,11 +1,11 @@
-Feature: Funcionalidad de creacion de Posts
+Feature: d_Funcionalidad de creación de Posts - Esceneario título y contenido faker - Caracteres especiales
 
-@user1 @web
+@user4 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
-  And I wait 
+  And I wait for 2 seconds
   When I enter email "<USERNAME>"
-  And I wait 
+  And I wait
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
   And I click next "escenario1"
@@ -14,9 +14,9 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on new post
   And I wait for 1 seconds
-  And I set the post title "<POST_TITLE>" "escenario1"
+  And I set the post title "$name_post_title" "escenario1"
   And I wait for 1 seconds
-  And I set the post content "<POST_CONTENT>"
+  And I set the post content "$name_post_content"
   And I wait for 1 seconds
   And I click on publish post "escenario1"
   And I wait for 1 seconds
@@ -24,7 +24,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on Push Now "escenario1"
   And I wait for 1 seconds
-  Then I should see text "<POST_TITLE>" "escenario1"
+  Then I should see text "$$name_post_title" "escenario1"
   And I wait for 1 seconds
   And I navigate to page "http://localhost:2368/ghost/#/posts"
   And I wait for 1 seconds
@@ -35,7 +35,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I click on delete "escenario3"
   And I wait for 1 seconds
   And I confirm delete "escenario3"
-  
+
   Examples:
-  | USERNAME   | PASSWORD   | POST_TITLE    | POST_CONTENT    |
-  | pmbtgun@gmail.com      | QAZwsx01@2023      | This is a title| This is a content |
+  | USERNAME   | PASSWORD   |
+  | pmbtgun@gmail.com      | QAZwsx01@2023      |

@@ -1,11 +1,11 @@
-Feature: Titulo de tamano 256
+Feature: f_Funcionalidad de creación de Posts - Sin contenido
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
-  And I wait 
+  And I wait for 2 seconds
   When I enter email "<USERNAME>"
-  And I wait 
+  And I wait
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
   And I click next "escenario1"
@@ -17,8 +17,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I set the post title "<POST_TITLE>" "escenario1"
   And I wait for 1 seconds
   Then I can NOT save or update posts
-  
 
   Examples:
-  | USERNAME   | PASSWORD   | POST_TITLE    | POST_CONTENT    |
-  | pmbtgun@gmail.com      | QAZwsx01@2023      | 1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456| This is a content |
+  | USERNAME | PASSWORD | POST_TITLE |
+  | pmbtgun@gmail.com | QAZwsx01@2023| This is a title |
