@@ -312,5 +312,42 @@ Para más detalles consulte [README Backstop](https://github.com/pbuitragom/TSDC
 * [Creación de diferencias BackStop](https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled)
 
 
+## Semana 7 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para utilizar data pools apriori, automatizados y dinámcios
+
+Previamente instale Ghost como se indica en la guía: [Guía de Instalación de Ghost](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/ghost-local-deployment/index.html#2)
+
+La versión que se debe utilizar es Ghost v5.72.2
+
+Una vez instalado Ghost:
+
+- Configurar la instalación local en [http://localhost:2368/ghost/#/setup](http://localhost:2368/ghost/#/setup)
+
+![Configuración de Ghost](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/a71f9e55-055c-4bc7-8b4c-0b50637e894b)
+
+Configurando los campos de la imagen de arriba así:
+- Site title: MISO Entrega 5
+- Full Name: Pepito Perez
+- Email address: pmbtgun@gmail.com
+- Password: QAZwsx01@2023
+
+En este punto tendrá el sitio así:
+
+![Sitio configurado](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/1bae650f-338b-490a-bd66-95176aaf5333)
+
+
+### Pasos de Instalación
+
+#### Para Kraken:
+
+- Funciona para Node 16: `nvm use v16`
+- Seguir el manual de instalación de Kraken en su ambiente [aquí](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/kraken-web-testing-tool/index.html#2)
+- Instalar android-platform-tools, en nuestro caso: `brew install android-platform-tools`
+- Instalar `npm install chai`
+- Clonar este repositorio [https://github.com/pbuitragom/TSDC-Issue-Tracker.git](https://github.com/pbuitragom/TSDC-Issue-Tracker.git)
+- `npm install`
+- `cd TSDC-Issue-Tracker/kraken`
+- Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
+
+
 ### Reporte de Incidencias
 - [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
