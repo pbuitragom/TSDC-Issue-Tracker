@@ -311,8 +311,10 @@ Para más detalles consulte [README Backstop](https://github.com/pbuitragom/TSDC
 
 * [Creación de diferencias BackStop](https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled)
 
+------------------
+## Semana 7 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para utilizar data pools apriori, automatizados y dinámcios  [WIKI ](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategias-de-Generaci%C3%B3n-de-Datos-en-Pruebas-Automatizadas)
 
-## Semana 7 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para utilizar data pools apriori, automatizados y dinámcios
+
 
 Previamente instale Ghost como se indica en la guía: [Guía de Instalación de Ghost](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/ghost-local-deployment/index.html#2)
 
@@ -347,6 +349,77 @@ En este punto tendrá el sitio así:
 - `npm install`
 - `cd TSDC-Issue-Tracker/kraken`
 - Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
+
+
+#### Pruebas Automatizadas para Ghost 5.74.1 con Puppeteer y Estrategia de Datos Faker 
+
+##### [README Puppeteer](https://github.com/pbuitragom/TSDC-Issue-Tracker/blob/main/puppeteer/README.md)
+
+##### Descripción General
+Este proyecto presenta pruebas automatizadas para Ghost v5.74.1, utilizando Puppeteer para la interacción con el navegador y Faker.js para la generación de datos. Las pruebas cubren funcionalidades clave de Ghost como login, pages, post, member y tag.
+
+##### Instalación de Ghost
+Instala Ghost siguiendo la [Guía de Instalación de Ghost](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/ghost-local-deployment/index.html#2) y configura tu sitio localmente en [http://localhost:2369/ghost/#/setup](http://localhost:2369/ghost/#/setup).
+
+##### Instalación de Puppeteer
+Para iniciar las pruebas automatizadas:
+1. Asegúrate de tener Node.js y npm instalados.
+2. Clona el repositorio de pruebas.
+3. Navega al directorio del proyecto y ejecuta `npm install`, `npm install puppeteer` y `npm install @faker-js/faker`.
+
+##### Estructura de Directorios
+- `node_modules/`: Dependencias del proyecto.
+- `pages/`: Scripts de páginas para las pruebas.
+- `tests/`: Scripts de pruebas automatizadas.
+
+##### Integración de Escenarios con Estrategias de Generación de Datos
+Las pruebas combinan datos a-priori y dinámicos/aleatorios para validar diferentes escenarios en Ghost.
+
+##### Pruebas Implementadas
+- `loginTests.js`: Inicio de sesión con credenciales correctas.
+- `loginTestsInvalid.js`: Inicio de sesión con credenciales incorrectas.
+- `memberInvalid.js`: Creación de miembro con email inválido.
+- `memberNew.js`: Adición de nuevo miembro.
+- `pageError.js`: Creación de página con título excesivo.
+- `postError.js`: Publicación de post con errores.
+- `tagsTests.js`: Creación de tags con nombres inválidos.
+
+Ejecuta pruebas con `node tests/<nombre-del-test>.js`.
+
+Ejemplo: `node tests/tagsTests.js`
+
+##### Resultados de las Pruebas
+Los scripts proveen información detallada sobre el éxito o fallo de las pruebas. Las capturas de pantalla documentan errores encontrados.
+
+
+### - [WIKI semana 7](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategias-de-Generaci%C3%B3n-de-Datos-en-Pruebas-Automatizadas)
+
+### - [Listado Escenarios](https://uniandes-my.sharepoint.com/:x:/g/personal/p_buitragom_uniandes_edu_co/ETOxuBgdZuVJq8v1D5EW0gQBbxNuO-iJKiDRC1LRxTCJ3g?e=uMdnh7)
+
+### - [Codigo Escenarios](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main)
+
+- [Código Escenarios Kraken](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/kraken/features)
+- [Código Escenarios Cypress]()
+- [Código Escenarios Puppeteer](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/puppeteer)
+
+### - [Videos](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategias-de-Generaci%C3%B3n-de-Datos-en-Pruebas-Automatizadas)
+
+#### Kraken
+
+- [ Video Contexto General Kraken](https://uniandes-my.sharepoint.com/personal/p_buitragom_uniandes_edu_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fp%5Fbuitragom%5Funiandes%5Fedu%5Fco%2FDocuments%2FPruebasAutomatizadas%20%2D%20TrabajoEnGrupo%2FEntrega7%2FContextoGeneral%2Emov&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview)
+
+- [Video Escenarios de Pruebas Ejecución Kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EbXupyxiasVMkfsftprYQ7gBkHFpZCSeMPfqFMqzmAriew?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=ZHvIq3)
+
+#### Cypress
+
+- [Cypress](#)
+
+
+#### Puppeteer
+
+- [Video Pruebas Puppeteer](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZEu6t5RjvBFnNkPUpzucSMBKzd120RfQR0u1C4P5CjsuA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=fKhZgO)
+
+
 
 
 ### Reporte de Incidencias
