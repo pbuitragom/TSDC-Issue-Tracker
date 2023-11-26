@@ -111,4 +111,13 @@ Pruebas de miembros: Validan la gestión de errores y la creación de nuevos mie
 Pruebas de páginas y posts: Verifican la validación y publicación de contenido nuevo, así como el manejo adecuado de errores en los títulos.
 
 
+
+### Código 
+- [Código Escenarios Puppeteer](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/puppeteer/tests)
+
 ### Videos 
+
+- [Video Pruebas Puppeteer](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EZEu6t5RjvBFnNkPUpzucSMBKzd120RfQR0u1C4P5CjsuA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=fKhZgO)
+
+### Reporte de Incidencias
+- [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
