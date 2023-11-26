@@ -37,5 +37,5 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I confirm delete "escenario3"
   
   Examples:
-  | USERNAME   | PASSWORD   | POST_TITLE    | POST_CONTENT    |
-  | pmbtgun@gmail.com      | QAZwsx01@2023      | This is a title| This is a content |
+  | USERNAME   | PASSWORD | POST_TITLE    | POST_CONTENT    |
+  | pmbtgun@gmail.com      | QAZwsx01@2023  | This is a title| This is a content |

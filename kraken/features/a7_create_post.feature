@@ -1,4 +1,4 @@
-Feature: f_Funcionalidad de creación de Posts - Sin contenido
+Feature: Funcionalidad de creacion de Posts Sin contenido
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo

@@ -1,4 +1,4 @@
-Feature: Setting-up data for update scenarios
+Feature: Settingup data for update scenarios
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo

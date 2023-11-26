@@ -1,4 +1,4 @@
-Feature: d_Funcionalidad de creación de Posts - Esceneario título y contenido faker - Caracteres especiales
+Feature: Funcionalidad de creacion de Posts  Esceneario titulo y contenido faker Caracteres especiales
 
 @user4 @web
 Scenario: Como usuario Quiero crear un post para compartirlo

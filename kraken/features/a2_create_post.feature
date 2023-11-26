@@ -1,4 +1,4 @@
-Feature: Funcionalidad de creacion de Posts
+Feature: Funcionalidad de creacion de Posts 255 caracteres
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo

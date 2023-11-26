@@ -26,7 +26,7 @@ When('I click next {string}', async function(scenario) {
 
 When('I click on feature post {string}', async function(scenario) {
     await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    let element = await this.driver.$('#ember19');
+    let element = await this.driver.$('[data-test-nav="posts"]');
     return await element.click();
 })
 

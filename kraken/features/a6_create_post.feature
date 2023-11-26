@@ -1,4 +1,4 @@
-Feature: e_Funcionalidad de creación de Posts - Sin título y con contenido
+Feature: Funcionalidad de creacion de Posts Sin titulo y con contenido
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
