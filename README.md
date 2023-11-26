@@ -312,7 +312,7 @@ Para más detalles consulte [README Backstop](https://github.com/pbuitragom/TSDC
 * [Creación de diferencias BackStop](https://app.usebubbles.com/fUPXpQEhnoW6tatuGdemvv/untitled)
 
 ------------------
-## Semana 7 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para utilizar data pools apriori, automatizados y dinámcios  [WIKI ](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategias-de-Generaci%C3%B3n-de-Datos-en-Pruebas-Automatizadas)
+## Semana 7 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress modificados para utilizar data pools apriori, y Puppeteer automatizados  dinámicos y aleatorios  [WIKI ](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategias-de-Generaci%C3%B3n-de-Datos-en-Pruebas-Automatizadas)
 
 
 
