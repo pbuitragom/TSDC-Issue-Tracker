@@ -1,4 +1,4 @@
-Feature: Funcionalidad actualizacion de Post Faker Caracteres Especiales
+Feature: Funcionalidad actualizacion de Titulo del Post con  Faker Caracteres Especiales
 
 @user1 @web
 Scenario: Como usuario Quiero Actualizar el Post Anterior

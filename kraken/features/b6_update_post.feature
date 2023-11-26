@@ -1,4 +1,4 @@
-Feature: Funcionalidad actualizacion de Titulo de Post Faker Name
+Feature: Funcionalidad actualizacion de Contenido de Post Faker Name
 
 @user1 @web
 Scenario: Como usuario Quiero Actualizar el Post Anterior
@@ -16,7 +16,7 @@ Scenario: Como usuario Quiero Actualizar el Post Anterior
   And I wait for 1 seconds
   And I click on post settings "escenario2_step_3.png"
   And I wait for 1 seconds
-  And I set the post title "$name_title_updated" "escenario2"
+  And I set the post content "$name_content_updated" "escenario2"
   And I wait for 1 seconds
   And I click on update "escenario2_step_4.png"
   And I wait for 1 seconds
