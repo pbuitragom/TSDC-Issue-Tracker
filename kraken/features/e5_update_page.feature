@@ -16,7 +16,7 @@ Scenario: Como usuario Quiero actualizar una page para compartirlo
   And I wait for 1 seconds
   And I click on post settings "escenario5_step_4.png"
   And I wait for 1 seconds
-  And I set the page title "$name_page_title" "escenario5" 
+  And I set the page title "$string_page_title" "escenario5" 
   And I wait for 1 seconds
   And I click on update page "escenario5"
   And I wait for 3 seconds
