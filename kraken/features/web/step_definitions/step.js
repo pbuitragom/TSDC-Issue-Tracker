@@ -52,6 +52,16 @@ Then('I can NOT save or update posts', async function () {
     return;
 });
 
+Then('I can NOT save or update pages', async function () {
+    let element = await this.driver.$('[data-test-editor-title-input]');
+    try{
+        expect(element).to.not.exist;
+    } catch (error) {
+        console.log("La prueba falló debido a que el elemento no debería existir, pero fue encontrado.", error.message);
+    }
+    return;
+});
+
 When('I set the post content {kraken-string}', async function (content) {
     let element = await this.driver.$('.kg-prose');
     return await element.setValue(content);

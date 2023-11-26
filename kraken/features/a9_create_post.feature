@@ -1,11 +1,11 @@
-Feature: Esceneario titulo faker Caracteres especiales
+Feature: Funcionalidad de creacion de Posts  Esceneario contenido faker Name
 
-@user1 @web
+@user4 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
-  And I wait 
+  And I wait for 2 seconds
   When I enter email "<USERNAME>"
-  And I wait 
+  And I wait
   And I enter password "<PASSWORD>"
   And I wait for 1 seconds
   And I click next "escenario1"
@@ -14,9 +14,9 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on new post
   And I wait for 1 seconds
-  And I set the post title "$string_post_title" "escenario1"
+  And I set the post title "$name_post_title" "escenario1"
   And I wait for 1 seconds
-  And I set the post content "$string_post_content"
+  And I set the post content "$name_post_content"
   And I wait for 1 seconds
   And I click on publish post "escenario1"
   And I wait for 1 seconds
@@ -24,7 +24,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on Push Now "escenario1"
   And I wait for 1 seconds
-  Then I should see text "$$string_post_title" "escenario1"
+  Then I should see text "$$name_post_title" "escenario1"
   And I wait for 1 seconds
   And I navigate to page "http://localhost:2368/ghost/#/posts"
   And I wait for 1 seconds

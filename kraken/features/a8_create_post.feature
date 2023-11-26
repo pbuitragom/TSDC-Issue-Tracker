@@ -1,4 +1,4 @@
-Feature: Esceneario titulo faker Caracteres especiales
+Feature: Esceneario contenido faker Caracteres especiales
 
 @user1 @web
 Scenario: Como usuario Quiero crear un post para compartirlo
@@ -14,7 +14,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on new post
   And I wait for 1 seconds
-  And I set the post title "$string_post_title" "escenario1"
+  And I set the post title "<PAGE_TITLE>" "escenario1"
   And I wait for 1 seconds
   And I set the post content "$string_post_content"
   And I wait for 1 seconds
@@ -24,7 +24,7 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I wait for 1 seconds
   And I click on Push Now "escenario1"
   And I wait for 1 seconds
-  Then I should see text "$$string_post_title" "escenario1"
+  Then I should see text "<PAGE_TITLE>" "escenario1"
   And I wait for 1 seconds
   And I navigate to page "http://localhost:2368/ghost/#/posts"
   And I wait for 1 seconds
@@ -37,5 +37,5 @@ Scenario: Como usuario Quiero crear un post para compartirlo
   And I confirm delete "escenario3"
 
   Examples:
-  | USERNAME   | PASSWORD   |
-  | pmbtgun@gmail.com      | QAZwsx01@2023      |
+  | USERNAME | PASSWORD | PAGE_TITLE |
+  | pmbtgun@gmail.com | QAZwsx01@2023 | This is a title |

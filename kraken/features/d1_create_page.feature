@@ -14,7 +14,7 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait for 1 seconds
   And I click on new page
   And I wait for 1 seconds
-  And I set the page title "<PAGE_CONTENT>" "escenario4"
+  And I set the page title "<PAGE_TITLE>" "escenario4"
   And I wait for 1 seconds
   And I set the page content "<PAGE_CONTENT>" "escenario4"
   And I wait for 1 seconds
@@ -24,7 +24,7 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I wait for 1 seconds
   And I click on Push Now "escenario4"
   And I wait for 1 seconds
-  Then I should see text "<PAGE_CONTENT>" "escenario4"
+  Then I should see text "<PAGE_TITLE>" "escenario4"
   And I navigate to page "http://localhost:2368/ghost/#/pages"
   And I wait for 1 seconds
   And I click on recently created page "escenario6"
@@ -36,6 +36,6 @@ Scenario: Como usuario Quiero crear una page para compartirlo
   And I confirm delete "escenario6" 
 
 Examples:
-  | USERNAME   | PASSWORD | PAGE_TILE    | PAGE_CONTENT    |
+  | USERNAME   | PASSWORD | PAGE_TITLE    | PAGE_CONTENT    |
   | pmbtgun@gmail.com      | QAZwsx01@2023  | This is a title| This is a content |
   
