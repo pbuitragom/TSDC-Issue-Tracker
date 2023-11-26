@@ -86,7 +86,6 @@ Las pruebas están organizadas dentro de la carpeta tests. Cada archivo de prueb
 - `memberInvalid.js` - Crea un miembro con un email inválido.
 - `memberNew.js` - Añade un nuevo miembro con datos válidos.
 - `pageError.js` - Intenta crear una página con un título que excede el límite permitido.
-- `pagesTestsNew.js` - Crea una nueva página con un título adecuado.
 - `postError.js` - Trata de publicar un post con errores.
 - `tagsTests.js` - Prueba la creación de tags con nombres no permitidos.
 
@@ -99,7 +98,6 @@ Ejemplo:
 - ```node tests/memberInvalid.js```
 - ```node tests/memberNew.js```
 - ```node tests/pageError.js```
-- ```node tests/pagesTestsNew.js```
 - ```node tests/postError.js```
 - ```node tests/tagsTests.js```
 
