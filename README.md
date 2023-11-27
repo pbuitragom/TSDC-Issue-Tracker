@@ -350,6 +350,57 @@ En este punto tendrá el sitio así:
 - `cd TSDC-Issue-Tracker/kraken`
 - Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
 
+#### Para Cypress:
+
+Asegúrese de tener Node.js instalado. Si no lo tiene, puede instalarlo desde [https://nodejs.org/](https://nodejs.org/).
+
+Clone el repositorio Cypress del proyecto:
+```bash
+git clone https://github.com/pbuitragom/TSDC-Issue-Tracker.git
+cd TSDC-Issue-Tracker
+```
+
+En este punto, tendrá dos carpetas relevantes para Cypress:
+
+- `cypress`: Pruebas para la versión `ghost v5.72.2`
+- `cypress-4.44`: Pruebas para la versión `ghost v4.44`
+
+#####  Para la ejecución de las pruebas de la versión `ghost v5.72.2`:
+
+- Asegúrese de tener el servicio de `ghost v5.72.2` en funcionamiento.
+- Navegue a la carpeta de pruebas:
+  ```bash
+  cd cypress
+  ```
+- Instale las dependencias:
+  ```bash
+  npm install
+  ```
+- Ejecute las pruebas:
+  ```bash
+  npx cypress open
+  ```
+
+##### Para la ejecución de las pruebas de la versión `ghost v4.44`:
+
+Nota: Asegúrese de que los archivos `cypress-4.44/a_create_post.feature`, `cypress-4.44/b_update_post.feature`, `cypress-4.44/c_delete_post.feature`, `cypress-4.44/d_create_page.feature` y `cypress-4.44/e_update_page.feature` estén configurados correctamente para apuntar al entorno de prueba. Actualmente, apuntan a una máquina en AWS en la declaración "Given I navigate to page "http://ec2-18-191-54-169.us-east-2.compute.amazonaws.com:2368/ghost/#/signin"". Ajuste las URL según sea necesario, ya que la URL proporcionada no estará disponible para terceros.
+
+- Asegúrese de tener el servicio de `ghost v4.44` en funcionamiento.
+- Navegue a la carpeta de pruebas:
+  ```bash
+  cd cypress-4.44
+  ```
+- Instale las dependencias:
+  ```bash
+  npm install
+  ```
+- Ejecute las pruebas:
+  ```bash
+  npx cypress open
+  ```
+
+Después de la ejecución, encontrará las imágenes correspondientes a las capturas de pantalla de referencia para cada versión, escenario y paso definido.
+
 
 #### Pruebas Automatizadas para Ghost 5.74.1 con Puppeteer y Estrategia de Datos Faker 
 
