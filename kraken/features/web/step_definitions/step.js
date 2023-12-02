@@ -1,14 +1,15 @@
 const { Before, Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
 const { writeFileSync } = require('fs');
-const fetch = require('node-fetch');
 const HomePage = require('../pageobjects/homePage');
 const LoginPage = require('../pageobjects/loginPage');
 const PostPage = require('../pageobjects/postPage');
+const PagePage = require('../pageobjects/pagePage');
 
 let loginPage = null;
 let homePage = null;
 let postPage = null;
+let pagePage = null;
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
@@ -19,6 +20,7 @@ When('I enter email {kraken-string}', async function (email) {
     this.loginPage = new LoginPage(this.driver);
     this.homePage = new HomePage(this.driver);
     this.postPage = new PostPage(this.driver);
+    this.pagePage = new PagePage(this.driver);
     return await this.loginPage.enterEmail(email);
 });
 
@@ -48,13 +50,7 @@ Then('I can NOT save or update posts', async function () {
 });
 
 Then('I can NOT save or update pages', async function () {
-    let element = await this.driver.$('[data-test-editor-title-input]');
-    try{
-        expect(element).to.not.exist;
-    } catch (error) {
-        console.log("La prueba falló debido a que el elemento no debería existir, pero fue encontrado.", error.message);
-    }
-    return;
+    await this.pagePage.assertNoEditorTitleInput();
 });
 
 When('I set the post content {kraken-string}', async function (content) {
@@ -66,9 +62,7 @@ When('I click on publish post {string}', async function (scenario) {
 });
 
 When('I click on publish page {string}', async function (scenario) {
-    let element = await this.driver.$('[data-test-button="publish-flow"]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_4.png");
-    return await element.click();
+    await this.pagePage.clickOnPublishPage(scenario);
 });
 
 When('I click on Continue, final review {string}', async function (scenario) {
@@ -109,30 +103,23 @@ When('I click on feature pages {string}', async function(scenario) {
 })
 
 When('I click on new page', async function() {
-    let element = await this.driver.$('[data-test-new-page-button]');
-    return await element.click();
+    return await this.pagePage.clickOnNewPage();
 })
 
 When('I set the page title {kraken-string} {string}', async function (title, scenario) {
-    let element = await this.driver.$('[data-test-editor-title-input]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
-    return await element.setValue(title);
+    await this.pagePage.setPageTitle(title, scenario);
 });
 
 When('I set the page content {kraken-string} {string}', async function (content, scenario) {
-    let element = await this.driver.$('.kg-prose');
-    return await element.setValue(content);
+    await this.pagePage.setPageContent(content, scenario);
 });
 
 When('I click on recently created page {string}', async function (scenario) {
-    let element = await this.driver.$('h3.gh-content-entry-title');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
-    return await element.click();
+    await this.pagePage.clickOnRecentlyCreatedPage(scenario);
 });
 
 When('I click on delete page', async function () {
-    let element = await this.driver.$('.gh-btn.gh-btn-outline.gh-btn-icon.gh-btn-fullwidth');
-    return await element.click();
+    await this.pagePage.clickOnDeletePage();
 });
 
 When('I click on feature members', async function() {
@@ -194,9 +181,5 @@ Then('I should see post updated {string}', async function (scenario) {
 });
 
 When('I click on update page {string}', async function (scenario) {
-    await takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
-    let element = await this.driver.$('//button[@data-test-button="publish-save"]');
-    await new Promise(r => setTimeout(r, 2000));
-    await element.click();
-    return await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
+    await this.pagePage.clickOnUpdatePage(scenario);
 });
