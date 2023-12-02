@@ -1,9 +1,15 @@
+const expect = require('chai').expect;
 const BasePage = require('./basePage');
 
 class MemberPage extends BasePage {
 
   constructor(driver) {
     super(driver);
+  }
+
+  async clickNewMember() {
+    let element = await this.driver.$('[data-test-new-member-button]');
+    return await element.click();
   }
 
   async setMemberName(name) {

@@ -129,7 +129,7 @@ When('I click on feature members', async function() {
 })
 
 When('I click on new member', async function() {
-    return await this.home
+    await this.memberPage.clickNewMember();
 })
 
 Then('I should see the post section {string}', async function (scenario) {
