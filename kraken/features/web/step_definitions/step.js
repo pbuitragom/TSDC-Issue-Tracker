@@ -2,9 +2,11 @@ const { Before, Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
 const { writeFileSync } = require('fs');
 const fetch = require('node-fetch');
+const HomePage = require('../pageobjects/homePage');
 const LoginPage = require('../pageobjects/loginPage');
 
 let loginPage = null;
+let homePage = null;
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
@@ -13,6 +15,7 @@ async function takeAndSaveScreenshot(driver, name) {
 
 When('I enter email {kraken-string}', async function (email) {
     this.loginPage = new LoginPage(this.driver);
+    this.homePage = new HomePage(this.driver);
     return await this.loginPage.enterEmail(email);
 });
 
@@ -25,9 +28,8 @@ When('I click next {string}', async function(scenario) {
 })
 
 When('I click on feature post {string}', async function(scenario) {
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    let element = await this.driver.$('[data-test-nav="posts"]');
-    return await element.click();
+    //await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
+    return await this.homePage.ingresar_a_opcion_posts();
 })
 
 When('I click on new post', async function() {
@@ -136,9 +138,8 @@ When('I click on update {string}', async function (sufixname) {
 });
 
 When('I click on feature pages {string}', async function(scenario) {
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    let element = await this.driver.$('[data-test-nav="pages"]');
-    return await element.click();
+    //await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
+    return await this.homePage.ingresar_a__opcion_pages();
 })
 
 When('I click on new page', async function() {
@@ -169,13 +170,11 @@ When('I click on delete page', async function () {
 });
 
 When('I click on feature members', async function() {
-    let element = await this.driver.$('[data-test-nav="members"]');
-    return await element.click();
+    return await this.homePage.ingresar_a_opcion_members();
 })
 
 When('I click on new member', async function() {
-    let element = await this.driver.$('[data-test-new-member-button]');
-    return await element.click();
+    return await this.home
 })
 
 When('I set the member name {kraken-string}', async function (name) {
