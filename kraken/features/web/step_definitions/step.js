@@ -1,7 +1,10 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Before, Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
 const { writeFileSync } = require('fs');
 const fetch = require('node-fetch');
+const LoginPage = require('../pageobjects/loginPage');
+
+let loginPage = null;
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
@@ -9,19 +12,16 @@ async function takeAndSaveScreenshot(driver, name) {
 }
 
 When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#identification');
-    return await element.setValue(email);
+    this.loginPage = new LoginPage(this.driver);
+    return await this.loginPage.enterEmail(email);
 });
 
 When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#password');
-    return await element.setValue(password);
+    return await this.loginPage.enterPassword(password);
 });
 
 When('I click next {string}', async function(scenario) {
-    let element = await this.driver.$('#ember5');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_1.png");
-    return await element.click();
+    return await this.loginPage.authenticate();
 })
 
 When('I click on feature post {string}', async function(scenario) {
