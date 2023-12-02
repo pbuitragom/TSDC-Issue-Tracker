@@ -10,6 +10,7 @@ let loginPage = null;
 let homePage = null;
 let postPage = null;
 let pagePage = null;
+let memberPage = null;
 
 When('I enter email {kraken-string}', async function (email) {
     this.loginPage = new LoginPage(this.driver);
