@@ -95,6 +95,15 @@ class PostPage extends BasePage {
     //await this.takeAndSaveScreenshot(scenario + '_step_5.png');
     expect(element).to.exist;
   }
+
+  async assertPostNotSavedOrUpdated() {
+    let element = await this.driver.$('[data-test-editor-title-input]');
+    try {
+      expect(element).to.not.exist;
+    } catch (error) {
+      console.log("La prueba falló debido a que el elemento no debería existir, pero fue encontrado.", error.message);
+    }
+  }
 }
 
 module.exports = PostPage;

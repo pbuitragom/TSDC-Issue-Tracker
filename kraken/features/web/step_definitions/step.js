@@ -5,6 +5,7 @@ const HomePage = require('../pageobjects/homePage');
 const LoginPage = require('../pageobjects/loginPage');
 const PostPage = require('../pageobjects/postPage');
 const PagePage = require('../pageobjects/pagePage');
+const MemberPage = require('../pageobjects/memberPage');
 
 let loginPage = null;
 let homePage = null;
@@ -21,6 +22,7 @@ When('I enter email {kraken-string}', async function (email) {
     this.homePage = new HomePage(this.driver);
     this.postPage = new PostPage(this.driver);
     this.pagePage = new PagePage(this.driver);
+    this.memberPage = new MemberPage(this.driver);
     return await this.loginPage.enterEmail(email);
 });
 
@@ -130,48 +132,6 @@ When('I click on new member', async function() {
     return await this.home
 })
 
-When('I set the member name {kraken-string}', async function (name) {
-    let element = await this.driver.$('#member-name');
-    return await element.setValue(name);
-});
-
-When('I set the member email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#member-email');
-    return await element.setValue(email);
-});
-
-When('I click on save member', async function () {
-    let element = await this.driver.$('button[data-test-button="save"]');
-    return await element.click();
-});
-
-When('I click on the member recently created', async function () {
-    let element = await this.driver.$('a[data-test-table-data="details"]');
-    return await element.click();
-});
-
-When('I update the member name {kraken-string}', async function (name) {
-    let element = await this.driver.$('#member-name');
-    return await element.setValue(name);
-});
-
-
-When('I click on member settings', async function () {
-    let element = await this.driver.$('.gh-btn.gh-btn-icon');
-    return await element.click();
-});
-
-When('I click on delete member', async function () {
-    let element = await this.driver.$('button[data-test-button="delete-member"]');
-    return await element.click();
-});
-
-Then('System notify member already exists', async function () {
-    let element = await this.driver.$('.response');
-    expect(element).to.exist;
-    return;
-});
-
 Then('I should see the post section {string}', async function (scenario) {
     await this.postPage.seePostSection(scenario);
 });
@@ -183,3 +143,36 @@ Then('I should see post updated {string}', async function (scenario) {
 When('I click on update page {string}', async function (scenario) {
     await this.pagePage.clickOnUpdatePage(scenario);
 });
+
+When('I set the member name {kraken-string}', async function (name) {
+    await this.memberPage.setMemberName(name);
+  });
+  
+  When('I set the member email {kraken-string}', async function (email) {
+    await this.memberPage.setMemberEmail(email);
+  });
+  
+  When('I click on save member', async function () {
+    await this.memberPage.clickSaveMember();
+  });
+  
+  When('I click on the member recently created', async function () {
+    await this.memberPage.clickRecentlyCreatedMember();
+  });
+  
+  When('I update the member name {kraken-string}', async function (name) {
+    await this.memberPage.updateMemberName(name);
+  });
+  
+  When('I click on member settings', async function () {
+    await this.memberPage.clickMemberSettings();
+  });
+  
+  When('I click on delete member', async function () {
+    await this.memberPage.clickDeleteMember();
+  });
+  
+  Then('System notify member already exists', async function () {
+    await this.memberPage.systemNotifyMemberExists();
+  });
+  
