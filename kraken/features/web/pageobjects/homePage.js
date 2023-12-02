@@ -1,4 +1,5 @@
 class HomePage {
+  
   constructor(driver) {
     this.driver = driver;
   }

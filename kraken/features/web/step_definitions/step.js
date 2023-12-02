@@ -4,9 +4,11 @@ const { writeFileSync } = require('fs');
 const fetch = require('node-fetch');
 const HomePage = require('../pageobjects/homePage');
 const LoginPage = require('../pageobjects/loginPage');
+const PostPage = require('../pageobjects/postPage');
 
 let loginPage = null;
 let homePage = null;
+let postPage = null;
 
 async function takeAndSaveScreenshot(driver, name) {
     const screenshot = await driver.takeScreenshot();
@@ -16,6 +18,7 @@ async function takeAndSaveScreenshot(driver, name) {
 When('I enter email {kraken-string}', async function (email) {
     this.loginPage = new LoginPage(this.driver);
     this.homePage = new HomePage(this.driver);
+    this.postPage = new PostPage(this.driver);
     return await this.loginPage.enterEmail(email);
 });
 
@@ -33,25 +36,15 @@ When('I click on feature post {string}', async function(scenario) {
 })
 
 When('I click on new post', async function() {
-    let element = await this.driver.$('[data-test-new-post-button]');
-    return await element.click();
+    return await this.postPage.clickOnNewPost();
 })
 
 When('I set the post title {kraken-string} {string}', async function (title, scenario) {
-    let element = await this.driver.$('[data-test-editor-title-input]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png");
-    await element.setValue(title);
-    return await new Promise(r => setTimeout(r, 2000));
+    await this.postPage.setPostTitle(title, scenario);
 });
 
 Then('I can NOT save or update posts', async function () {
-    let element = await this.driver.$('[data-test-editor-title-input]');
-    try{
-        expect(element).to.not.exist;
-    } catch (error) {
-        console.log("La prueba falló debido a que el elemento no debería existir, pero fue encontrado.", error.message);
-    }
-    return;
+    await this.postPage.assertPostNotSavedOrUpdated();
 });
 
 Then('I can NOT save or update pages', async function () {
@@ -65,14 +58,11 @@ Then('I can NOT save or update pages', async function () {
 });
 
 When('I set the post content {kraken-string}', async function (content) {
-    let element = await this.driver.$('.kg-prose');
-    return await element.setValue(content);
+    await this.postPage.setPostContent(content);
 });
 
 When('I click on publish post {string}', async function (scenario) {
-    let element = await this.driver.$('[data-test-button="publish-flow"]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_4.png");
-    return await element.click();
+    await this.postPage.clickOnPublishPost(scenario);
 });
 
 When('I click on publish page {string}', async function (scenario) {
@@ -82,59 +72,35 @@ When('I click on publish page {string}', async function (scenario) {
 });
 
 When('I click on Continue, final review {string}', async function (scenario) {
-    let element = await this.driver.$('button.gh-btn.gh-btn-black.gh-btn-large[data-test-button="continue"]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
-    return await element.click();
+    await this.postPage.clickOnContinueFinalReview(scenario);
 });
 
 When('I click on Push Now {string}', async function(scenario) {
-    let element = await this.driver.$('button[data-test-button="confirm-publish"]');
-    if (scenario !== "escenario4"){
-        await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
-    }
-    return await element.click();
+    await this.postPage.clickOnPushNow(scenario);
 });
 
 Then('I should see text {kraken-string} {string}', async function (title, scenario) {
-    let element = await this.driver.$('.gh-post-bookmark-content');
-    let stepName = "_step_6.png";
-    if (scenario === "escenario4"){
-        stepName = "_step_6.png";
-    }
-    await takeAndSaveScreenshot(this.driver,  scenario + stepName);
-    let text = await element.getText(); 
-    expect(text).contains(title);
-    return
+    await this.postPage.seeText(title, scenario);
 });
 
 When('I click on recently created post {string}', async function (scenario) {
-    let element = await this.driver.$('.gh-content-entry-title'); 
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_3.png" );
-    return await element.click();
+    await this.postPage.clickOnRecentlyCreatedPost(scenario);
 });
 
 When('I click on post settings {string}', async function (filename) {
-    let element = await this.driver.$('.settings-menu-toggle');
-    await takeAndSaveScreenshot(this.driver,  filename);
-    return await element.click();
+    await this.postPage.clickOnPostSettings(filename);
 });
 
 When('I click on delete {string}', async function (scenario) {
-    let element = await this.driver.$('//button[contains(., "Delete post")]');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
-    return await element.click();
+    await this.postPage.clickOnDelete(scenario);
 });
 
 When('I confirm delete {string}', async function (scenario){
-    let element = await this.driver.$('.gh-btn.gh-btn-red.gh-btn-icon');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_6.png");
-    return await element.click();
+    await this.postPage.confirmDelete(scenario);
 });
 
 When('I click on update {string}', async function (sufixname) {
-    let element = await this.driver.$('//button[@data-test-button="publish-save"]');
-    await takeAndSaveScreenshot(this.driver,  sufixname);
-    return await element.click();
+    await this.postPage.clickOnUpdate(sufixname);
 });
 
 When('I click on feature pages {string}', async function(scenario) {
@@ -220,17 +186,11 @@ Then('System notify member already exists', async function () {
 });
 
 Then('I should see the post section {string}', async function (scenario) {
-    let element = await this.driver.$('.gh-canvas-title');
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_7.png");
-    expect(element).to.exist;
-    return;
+    await this.postPage.seePostSection(scenario);
 });
 
 Then('I should see post updated {string}', async function (scenario) {
-    let element = await this.driver.$("//button[@data-test-button='publish-save']/span[contains(text(), 'Updated')]");
-    await takeAndSaveScreenshot(this.driver,  scenario + "_step_5.png");
-    expect(element).to.exist;
-    return;
+    await this.postPage.seePostUpdated(scenario);
 });
 
 When('I click on update page {string}', async function (scenario) {
