@@ -1,8 +1,9 @@
 const { writeFileSync } = require('fs');
+const BasePage = require('./basePage');
 
-class LoginPage {
+class LoginPage extends BasePage {
   constructor(driver) {
-    this.driver = driver;
+    super(driver);
   }
 
   async enterEmail(email) {
@@ -16,6 +17,7 @@ class LoginPage {
   }
 
   async authenticate(scenario) {
+    await this.takeAndSaveScreenshot(this.driver,  scenario + "_step_1.png");
     let element = await this.driver.$('#ember5');
     return await element.click();
   }
