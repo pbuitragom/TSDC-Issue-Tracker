@@ -499,7 +499,7 @@ En este punto tendrá el sitio así:
 
 ![Sitio configurado](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/1bae650f-338b-490a-bd66-95176aaf5333)
 
-Video explicativo estrategia utilizada: 
+Video explicativo estrategia utilizada:  https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1
 
 ### Pasos de Instalación
 
