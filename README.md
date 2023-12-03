@@ -499,7 +499,9 @@ En este punto tendrá el sitio así:
 
 ![Sitio configurado](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/1bae650f-338b-490a-bd66-95176aaf5333)
 
-Video explicativo estrategia utilizada: 
+Video explicativo estrategia utilizada:  https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1
+
+Nota: Las pruebas tardan cerca de 18 minutos en ejecutarse en su totalidad
 
 ### Pasos de Instalación
 
@@ -513,3 +515,70 @@ Video explicativo estrategia utilizada:
 - `npm install`
 - `cd TSDC-Issue-Tracker/kraken`
 - Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
+
+#### Para Cypress:
+- Funciona para Node 16: `nvm use v16`
+- Clonar el repositorio
+- Acceder a la carpeta de Cypress `cd cypress`
+- Instalar paquetes `npm i`
+- En el archivo cypress.env.json colocar las credenciales de Ghost `username` y `password`
+- En el archivo cypress.config.json Actualizar la ruta a ser testeade, por default la ruta es `http://localhost:2468/ghost` pero debe ser actualizada al ambiente que este corriendo Ghost.
+- Correr cypress con el comando: `npx cypress open`
+- Elegir pruebas e2e
+- Elegir un navegador recomendado: `Chrome`
+- Ir a la tab de Specs y elegir el test que quieras correr, los test de esta semana estaran en S8-cypress-1, S8-cypress-2. 
+
+Se detalla a continuación la versión final de la estrategia de pruebas para la aplicación Ghost en la semana 8. El objetivo es proporcionar un compendio completo de las actividades, estrategias, documentación, y análisis realizados por el equipo de pruebas durante la semana 1 de la estrategia propuesta.
+
+Para más detalles, consulta el [README del proyecto](https://github.com/pbuitragom/TSDC-Issue-Tracker/blob/main/README.md) y
+[Wiki del Repositorio Semana 8](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Semana-8:-Proyecto-de-Pruebas-Automatizadas-en-GHOST-con-Kraken-y-Cypress-%E2%80%90-Refactorizaci%C3%B3n-utilizando-el-patr%C3%B3n-PageObject-y-Versi%C3%B3n-final-de-la-estrategia-de-pruebas)
+
+Se realiza la instalación de Ghost como se indica en la guía: Guía de Instalación de Ghost
+
+Se utilizan dos version de ghots Ghost v5.72.2  y herramientas de Kraken y Cypress
+
+1. **Plantilla de estrategias de Pruebas y Presupuesto**
+*  Estrategia de Pruebas
+* [Formato Word Completo de Estrategia de Pruebas Semana 8](https://uniandes-my.sharepoint.com/:w:/g/personal/p_buitragom_uniandes_edu_co/Ee-GwGkwJ8RMorTjUG6YVX4B1TViyRUyv_vqIQ4s9eUYMQ?e=sDOfDE)**
+* [Pagina en la Wiki de Estrategia de Pruebas Semana 8](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/Estrategia-de-Pruebas-para-Aplicaci%C3%B3n-GHOST)**
+
+
+2. **Uso, Ejecución e implementación y código de soporte de pruebas en Ghost:**
+
+- **Instrucciones de Ejecución de Pruebas:** 
+- [README Semana 8](https://github.com/pbuitragom/TSDC-Issue-Tracker/blob/main/README.md)
+
+
+
+3. - **Código de Soporte**
+
+- Semana 1 **Pruebas E2E:** Validación del flujo completo de la aplicación.
+
+- **Pruebas con Kraken** 
+* [Código Semana 1-Kraken](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/kraken)
+* [Código Semana 1-Steps](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/kraken)
+* [Código Semana 1-Pages](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/kraken/features/web/pageobjects)
+
+-  **Pruebas con Cypress** 
+* [Código Semana 1-Cypress](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/cypress/cypress/e2e)
+* [Código Semana 1-1](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/cypress/cypress/e2e/S8-cypress-1)
+* [Código Semana 1-2](https://github.com/pbuitragom/TSDC-Issue-Tracker/tree/main/cypress/cypress/e2e/S8%20cypress%202)
+
+
+4. **Análisis de Resultados de Semana 1 Pros y Contras Pruebas con Kraken y Cypress** [Ver](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/An%C3%A1lisis-de-Resultados-de-Semana-1-Pros-y-Contras-Pruebas-con-Kraken-y-Cypress)
+* [Análisis de Resultados](https://github.com/pbuitragom/TSDC-Issue-Tracker/wiki/An%C3%A1lisis-de-Resultados-de-Semana-1-Pros-y-Contras-Pruebas-con-Kraken-y-Cypress)
+
+
+
+5. **Videos Explicativos**
+*  **Videos de Soporte Estrategia de Pruebas**
+* [Videos de Semana 1 de Estrategias de Pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EUR7iJFSlvRLub_Q0YDCOxsBmZH9RNtubIuWPr6F1nnKEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=5vg4sn)
+
+*  **Videos de Códigos**
+* [Pruebas Semana 1 Video Kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1github)
+* [Pruebas Semana 1 Video Cypress](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EffCM5QgQvNPrGt8Owt_CQMB0XjdDsX1M7LrGXS6iLuSig?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=rVHUj9)
+* [Pruebas Semana 1 Video-2 Cypress](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EcsFhmyyIytEp1ZTEjvM6wgBEottO9acDNEHLEYO5AFlsg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=rtSQk4)
+
+6. **Registro de Incidencias**
+
+* [Issues del Proyecto](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
