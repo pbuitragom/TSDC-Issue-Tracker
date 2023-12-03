@@ -501,6 +501,8 @@ En este punto tendrá el sitio así:
 
 Video explicativo estrategia utilizada:  https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1
 
+Nota: Las pruebas tardan cerca de 18 minutos en ejecutarse en su totalidad
+
 ### Pasos de Instalación
 
 #### Para Kraken:
