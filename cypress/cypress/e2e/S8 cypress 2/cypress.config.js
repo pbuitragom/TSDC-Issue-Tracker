@@ -5,10 +5,5 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    env: {
-      login_url: "http://localhost:2368/ghost",
-      products_url: "/products",
-      url_settings: "http://localhost:2368/ghost/#/settings"
-    },
   },
 });
