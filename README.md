@@ -516,7 +516,7 @@ Nota: Las pruebas tardan cerca de 18 minutos en ejecutarse en su totalidad
 - `cd TSDC-Issue-Tracker/kraken`
 - Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
 
-#### Para Kraken:
+#### Para Cypress:
 - Funciona para Node 16: `nvm use v16`
 - Clonar el repositorio
 - Acceder a la carpeta de Cypress `cd cypress`
