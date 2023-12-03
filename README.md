@@ -515,3 +515,15 @@ Nota: Las pruebas tardan cerca de 18 minutos en ejecutarse en su totalidad
 - `npm install`
 - `cd TSDC-Issue-Tracker/kraken`
 - Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
+
+#### Para Kraken:
+- Funciona para Node 16: `nvm use v16`
+- Clonar el repositorio
+- Acceder a la carpeta de Cypress `cd cypress`
+- Instalar paquetes `npm i`
+- En el archivo cypress.env.json colocar las credenciales de Ghost `username` y `password`
+- En el archivo cypress.config.json Actualizar la ruta a ser testeade, por default la ruta es `http://localhost:2468/ghost` pero debe ser actualizada al ambiente que este corriendo Ghost.
+- Correr cypress con el comando: `npx cypress open`
+- Elegir pruebas e2e
+- Elegir un navegador recomendado: `Chrome`
+- Ir a la tab de Specs y elegir el test que quieras correr, los test de esta semana estaran en S8-cypress-1 para los de Juan Carlos, S8-cypress-2 los de Juan David y S8-cypress-3 los de Irina
