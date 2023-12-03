@@ -572,7 +572,7 @@ Se utilizan dos version de ghots Ghost v5.72.2  y herramientas de Kraken y Cypre
 
 5. **Videos Explicativos**
 *  **Videos de Soporte Estrategia de Pruebas**
-*  [Videos de Soporte Estrategia de Pruebas]()
+* [Videos de Semana 1 de Estrategias de Pruebas](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EUR7iJFSlvRLub_Q0YDCOxsBmZH9RNtubIuWPr6F1nnKEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=5vg4sn)
 
 *  **Videos de Códigos**
 * [Pruebas Semana 1 Video Kraken](https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1github)
