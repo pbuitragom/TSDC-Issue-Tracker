@@ -1,6 +1,5 @@
 const { Before, Given, When, Then } = require('@cucumber/cucumber');
 const expect = require('chai').expect;
-const { writeFileSync } = require('fs');
 const HomePage = require('../pageobjects/homePage');
 const LoginPage = require('../pageobjects/loginPage');
 const PostPage = require('../pageobjects/postPage');
@@ -11,11 +10,7 @@ let loginPage = null;
 let homePage = null;
 let postPage = null;
 let pagePage = null;
-
-async function takeAndSaveScreenshot(driver, name) {
-    const screenshot = await driver.takeScreenshot();
-    writeFileSync('screen_gv5_' + name, screenshot, 'base64');
-}
+let memberPage = null;
 
 When('I enter email {kraken-string}', async function (email) {
     this.loginPage = new LoginPage(this.driver);
@@ -35,8 +30,7 @@ When('I click next {string}', async function(scenario) {
 })
 
 When('I click on feature post {string}', async function(scenario) {
-    //await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    return await this.homePage.ingresar_a_opcion_posts();
+    return await this.homePage.ingresar_a_opcion_posts(scenario);
 })
 
 When('I click on new post', async function() {
@@ -100,8 +94,7 @@ When('I click on update {string}', async function (sufixname) {
 });
 
 When('I click on feature pages {string}', async function(scenario) {
-    //await takeAndSaveScreenshot(this.driver,  scenario + "_step_2.png");
-    return await this.homePage.ingresar_a__opcion_pages();
+    return await this.homePage.ingresar_a__opcion_pages(scenario);
 })
 
 When('I click on new page', async function() {

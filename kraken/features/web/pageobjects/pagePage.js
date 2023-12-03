@@ -18,19 +18,19 @@ class PagePage extends BasePage {
 
   async clickOnPublishPage(scenario) {
     const element = await this.driver.$('[data-test-button="publish-flow"]');
-    //await takeAndSaveScreenshot(this.driver, scenario + "_step_4.png");
+    await this.takeAndSaveScreenshot(this.driver, scenario + "_step_4.png");
     await element.click();
   }
 
   async clickOnNewPage() {
     let element = await this.driver.$('[data-test-new-page-button]');
-    //await takeAndSaveScreenshot(this.driver, "_step_2.png"); // Asegúrate de tener esta función en tu código
+    await this.takeAndSaveScreenshot(this.driver, "_step_2.png"); // Asegúrate de tener esta función en tu código
     return await element.click();
   }
 
   async setPageTitle(title, scenario) {
     const element = await this.driver.$('[data-test-editor-title-input]');
-    //await takeAndSaveScreenshot(this.driver, scenario + "_step_3.png");
+    await this.takeAndSaveScreenshot(this.driver, scenario + "_step_3.png");
     await element.setValue(title);
   }
 
@@ -41,7 +41,7 @@ class PagePage extends BasePage {
 
   async clickOnRecentlyCreatedPage(scenario) {
     const element = await this.driver.$('h3.gh-content-entry-title');
-    //await takeAndSaveScreenshot(this.driver, scenario + "_step_3.png");
+    await this.takeAndSaveScreenshot(this.driver, scenario + "_step_3.png");
     await element.click();
   }
 
@@ -51,11 +51,11 @@ class PagePage extends BasePage {
   }
 
   async clickOnUpdatePage(scenario) {
-    //await takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
+    await this.takeAndSaveScreenshot(this.driver, scenario + "_step_5.png");
     const element = await this.driver.$('//button[@data-test-button="publish-save"]');
     await new Promise(r => setTimeout(r, 2000));
     await element.click();
-    //await takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
+    await this.takeAndSaveScreenshot(this.driver, scenario + "_step_6.png");
   }
 
 }

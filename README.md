@@ -475,3 +475,55 @@ Los scripts proveen información detallada sobre el éxito o fallo de las prueba
 
 ### Reporte de Incidencias
 - [TSDC-Issue-Tracker](https://github.com/pbuitragom/TSDC-Issue-Tracker/issues)
+
+
+## Semana 8 - Proyecto de Pruebas Automatizadas en GHOST con Kraken y Cypress - Refactorización utilizando el patrón PageObject 
+
+Previamente instale Ghost como se indica en la guía: [Guía de Instalación de Ghost](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/ghost-local-deployment/index.html#2)
+
+La versión que se debe utilizar es Ghost v5.72.2
+
+Una vez instalado Ghost:
+
+- Configurar la instalación local en [http://localhost:2368/ghost/#/setup](http://localhost:2368/ghost/#/setup)
+
+![Configuración de Ghost](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/a71f9e55-055c-4bc7-8b4c-0b50637e894b)
+
+Configurando los campos de la imagen de arriba así:
+- Site title: MISO Entrega 5
+- Full Name: Pepito Perez
+- Email address: pmbtgun@gmail.com
+- Password: QAZwsx01@2023
+
+En este punto tendrá el sitio así:
+
+![Sitio configurado](https://github.com/pbuitragom/TSDC-Issue-Tracker/assets/142738381/1bae650f-338b-490a-bd66-95176aaf5333)
+
+Video explicativo estrategia utilizada:  https://uniandes-my.sharepoint.com/:v:/g/personal/p_buitragom_uniandes_edu_co/EaKowp1KHHVLhbfOBqRJrHYBWD6qWm-Fbm78B3_ZXMrUHQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&e=m06ca1
+
+Nota: Las pruebas tardan cerca de 18 minutos en ejecutarse en su totalidad
+
+### Pasos de Instalación
+
+#### Para Kraken:
+
+- Funciona para Node 16: `nvm use v16`
+- Seguir el manual de instalación de Kraken en su ambiente [aquí](https://thesoftwaredesignlab.github.io/AutTestingCodelabs/kraken-web-testing-tool/index.html#2)
+- Instalar android-platform-tools, en nuestro caso: `brew install android-platform-tools`
+- Instalar `npm install chai`
+- Clonar este repositorio [https://github.com/pbuitragom/TSDC-Issue-Tracker.git](https://github.com/pbuitragom/TSDC-Issue-Tracker.git)
+- `npm install`
+- `cd TSDC-Issue-Tracker/kraken`
+- Ejecutar `./node_modules/kraken-node/bin/kraken-node run`
+
+#### Para Cypress:
+- Funciona para Node 16: `nvm use v16`
+- Clonar el repositorio
+- Acceder a la carpeta de Cypress `cd cypress`
+- Instalar paquetes `npm i`
+- En el archivo cypress.env.json colocar las credenciales de Ghost `username` y `password`
+- En el archivo cypress.config.json Actualizar la ruta a ser testeade, por default la ruta es `http://localhost:2468/ghost` pero debe ser actualizada al ambiente que este corriendo Ghost.
+- Correr cypress con el comando: `npx cypress open`
+- Elegir pruebas e2e
+- Elegir un navegador recomendado: `Chrome`
+- Ir a la tab de Specs y elegir el test que quieras correr, los test de esta semana estaran en S8-cypress-1 para los de Juan Carlos, S8-cypress-2 los de Juan David y S8-cypress-3 los de Irina
